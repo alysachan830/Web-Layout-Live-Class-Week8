@@ -1,0 +1,22 @@
+/* Global style setting */
+
+body {
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: $font-family-sans-serif-title;
+    font-weight: $font-weight-bold;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+ul, ol{
+    list-style: none;
+}
