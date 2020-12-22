@@ -18,11 +18,11 @@
       <%- include('templates/navbar.ejs'); %>
     <% } %>
 
-    <% if (subscribe) { %>
+    <%- contents %>
+
+    <% if (title == 'ALOHA | Discover your ideal hotel') { %>
       <%- include('templates/subscribe-l.ejs'); %>
     <% } %>
-
-    <%- contents %>
 
     <footer class="footer">
       footer
