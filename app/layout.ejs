@@ -20,13 +20,14 @@
 
     <%- contents %>
 
-    <% if (title == 'ALOHA | Discover your ideal hotel') { %>
+    <% if (title === 'ALOHA | Discover your ideal hotel') { %>
       <%- include('templates/subscribe-l.ejs'); %>
     <% } %>
 
-    <footer class="footer">
-      footer
-    </footer>
+    <% if (footer) { %>
+      <%- include('templates/footer.ejs'); %>
+    <% } %>
+
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
