@@ -9,3 +9,15 @@
         }
     }
 }
+
+/* Title font-family */
+.font-title{
+    font-family: $font-family-sans-serif-title;
+}
+
+/* Font-weight */
+.font-weight-lg-extra-bold{
+    @include media-breakpoint-up(lg){
+        font-weight: $font-weight-extra-bold;
+    }
+}
