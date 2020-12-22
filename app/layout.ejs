@@ -24,6 +24,11 @@
       <%- include('templates/subscribe-l.ejs'); %>
     <% } %>
 
+    <% if (subscribe) { %>
+      <%- include('templates/subscribe.ejs'); %>
+    <% } %>
+
+
     <% if (footer) { %>
       <%- include('templates/footer.ejs'); %>
     <% } %>
