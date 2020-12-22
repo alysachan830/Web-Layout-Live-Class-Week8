@@ -22,12 +22,11 @@
     }
 }
 
-/* Responsive text nowrap */
-// .text-lg-nowrap{
-//     @include media-breakpoint-up(lg){
-//         white-space: nowrap !important;
-//     }
-// }
+.font-weight-md-extra-bold{
+    @include media-breakpoint-up(md){
+        font-weight: $font-weight-extra-bold !important;
+    }
+}
 
 .letter-spacing-m0125{
     letter-spacing: -0.5px;

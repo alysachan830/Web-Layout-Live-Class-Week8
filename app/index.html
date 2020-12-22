@@ -9,29 +9,44 @@ engine: ejs
 current: index
 ---
 
-
+<!-- Banner starts -->
 <div class="banner-h">
   <!-- Slider main container -->
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-slide-1">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8 col-6">
+                     <h2 class="text-white text-center font-md-xl font-l font-weight-md-extra-bold font-weight-bold">Discover your ideal hotel</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-2">
+              <h2 class="text-white font-md-xl font-l font-weight-md-extra-bold font-weight-bold">Discover your ideal hotel</h2>
+            </div>
+            <div class="swiper-slide swiper-slide-3">
+              <h2 class="text-white font-md-xl font-l font-weight-md-extra-bold font-weight-bold">Discover your ideal hotel</h2>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev">
+          <span class="material-icons font-xl text-white">
+            keyboard_arrow_left
+            </span>
+        </div>
+        <div class="swiper-button-next">
+          <span class="material-icons font-xl text-white">
+            keyboard_arrow_right
+            </span>
+        </div>
+      </div>
 </div>
+<!-- Banner ends -->
+
 
 <!-- Swiper JS-->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

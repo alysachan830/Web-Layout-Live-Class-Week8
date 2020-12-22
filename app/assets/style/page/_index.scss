@@ -6,20 +6,20 @@
 
 /* Swiper */
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
+// html,
+// body {
+//   position: relative;
+//   height: 100%;
+// }
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   background: #eee;
+//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   color: #000;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .swiper-container {
   width: 100%;
@@ -27,9 +27,9 @@ body {
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  // text-align: center;
+  // font-size: 18px;
+  // background: #fff;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -44,4 +44,47 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+/* Swiper navigation button */
+.swiper-button-prev::after,.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  margin-left: 15px;
+
+  @include media-breakpoint-up(md){
+    margin-left: 40px;
+  }
+
+  @include media-breakpoint-up(lg){
+    margin-left: 180px;
+  }
+}
+
+.swiper-button-next {
+  margin-right: 15px;
+
+  @include media-breakpoint-up(md){
+    margin-right: 40px;
+  }
+
+  @include media-breakpoint-up(lg){
+    margin-right: 180px;
+  }
+}
+
+
+/* Swiper slide images */
+.swiper-slide-1 {
+  background: url('../images/index-banner.jpg') center/cover no-repeat;
+}
+
+.swiper-slide-2 {
+  background: url('../images/RangRak.jpg') center/cover no-repeat;
+}
+
+.swiper-slide-3 {
+  background: url('../images/top4.jpg') center/cover no-repeat;
 }
