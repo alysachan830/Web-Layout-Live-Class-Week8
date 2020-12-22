@@ -249,7 +249,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1110px //1140px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -339,7 +339,8 @@ $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-extra-bold:      800 !default;
+// $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
@@ -778,8 +779,8 @@ $nav-link-height:                   $font-size-base * $line-height-base + $nav-l
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-padding-y:          0px; //.25rem !default;
+$navbar-toggler-padding-x:          0px; //.75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
@@ -790,7 +791,7 @@ $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($black, .5) !default;
+$navbar-light-color:                #000; //rgba($black, .5) !default;
 $navbar-light-hover-color:          rgba($black, .7) !default;
 $navbar-light-active-color:         rgba($black, .9) !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
