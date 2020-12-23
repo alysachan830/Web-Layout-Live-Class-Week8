@@ -95,11 +95,14 @@
   right: 0;
   left: 0;
   bottom: 0;
-  transform: translateY(50%);
   z-index: 2;
+  transform: translateY(84%);
+  // transform: translateY(50%);
+
   &__icon{
     top: 28px;
     left: 16px;
     transform: translateY(-40%);
   }
+
 }
