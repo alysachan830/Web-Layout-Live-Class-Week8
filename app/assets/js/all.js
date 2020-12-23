@@ -1,11 +1,22 @@
-// Swiper in index.html
+// .swiper-banner in index.html
 // Initialize Swiper
-var swiper = new Swiper('.swiper-container', {
+var swiperBanner = new Swiper('.swiper-banner', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
+
+// .swiper-top-choices in index.html
+// Initialize Swiper
+var swiperTopChoices = new Swiper('.swiper-top-choices', {
+  slidesPerView: 4,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 
 // jQuery
 $(document).ready( () => {

@@ -13,7 +13,7 @@ current: index
 <div class="banner-h position-relative">
   <!-- Swiper starts -->
   <!-- Slider main container -->
-      <div class="swiper-container">
+      <div class="swiper-container swiper-banner">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -85,3 +85,56 @@ current: index
   
 </div>
 <!-- Banner ends -->
+
+<!-- Top Choices starts -->
+<div class="container">
+  <h2 class="top-choices-title font-weight-bold mb-10">Top Choices</h2>
+
+  <ul class="nav nav-tabs mb-10" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active px-10" id="bali-tab" data-toggle="tab" href="#bali" role="tab" aria-controls="bali" aria-selected="true">
+        <h3 class="font-title font-weight-bold font-m d-inline">Bali</h3>
+        <sup class="font-title font-weight-bold font-s">128</sup>
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link px-10" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+        <h3 class="font-title font-weight-bold font-m d-inline">Okinawa</h3>
+        <sup class="font-title font-weight-bold font-s">67</sup>
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link px-10" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+        <h3 class="font-title font-weight-bold font-m d-inline">Taipei</h3>
+        <sup class="font-title font-weight-bold font-s">53</sup>
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="bali" role="tabpanel" aria-labelledby="bali-tab">
+      
+      <!-- Swiper -->
+      <div class="swiper-container swiper-top-choices">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
+</div>
+<!-- Top Choices ends -->

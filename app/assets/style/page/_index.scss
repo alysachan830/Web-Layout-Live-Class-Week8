@@ -4,7 +4,7 @@
 }
 
 
-/* Swiper */
+/* Swiper global setting */
 
 // html,
 // body {
@@ -46,49 +46,54 @@
   align-items: center;
 }
 
-/* Swiper navigation button */
-.swiper-button-prev::after,.swiper-button-next::after {
-  display: none;
-}
+/* .swiper-banner in index.html */
 
-.swiper-button-prev {
-  margin-left: 15px;
+.swiper-banner {
 
-  @include media-breakpoint-up(md){
-    margin-left: 40px;
+  /* Swiper navigation button */
+  .swiper-button-prev::after,.swiper-button-next::after {
+    display: none;
   }
 
-  @include media-breakpoint-up(lg){
-    margin-left: 180px;
+  .swiper-button-prev {
+    margin-left: 15px;
+
+    @include media-breakpoint-up(md){
+      margin-left: 40px;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-left: 180px;
+    }
   }
-}
 
-.swiper-button-next {
-  margin-right: 15px;
+  .swiper-button-next {
+    margin-right: 15px;
 
-  @include media-breakpoint-up(md){
-    margin-right: 40px;
+    @include media-breakpoint-up(md){
+      margin-right: 40px;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-right: 180px;
+    }
   }
 
-  @include media-breakpoint-up(lg){
-    margin-right: 180px;
+
+  /* Swiper slide images */
+  .swiper-slide-1 {
+    background: url('../images/index-banner.jpg') center/cover no-repeat;
   }
+
+  .swiper-slide-2 {
+    background: url('../images/RangRak.jpg') center/cover no-repeat;
+  }
+
+  .swiper-slide-3 {
+    background: url('../images/top4.jpg') center/cover no-repeat;
+  }
+
 }
-
-
-/* Swiper slide images */
-.swiper-slide-1 {
-  background: url('../images/index-banner.jpg') center/cover no-repeat;
-}
-
-.swiper-slide-2 {
-  background: url('../images/RangRak.jpg') center/cover no-repeat;
-}
-
-.swiper-slide-3 {
-  background: url('../images/top4.jpg') center/cover no-repeat;
-}
-
 
 /* Search bar input icons */
 .search-bar-init{
@@ -97,7 +102,6 @@
   bottom: 0;
   z-index: 2;
   transform: translateY(84%);
-  // transform: translateY(50%);
 
   &__icon{
     top: 28px;
@@ -105,4 +109,33 @@
     transform: translateY(-40%);
   }
 
+}
+
+
+/* Top choices */
+.top-choices-title{
+  margin-top: 312px;
+  @include media-breakpoint-up(lg){
+    margin-top: 120px;
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: 0;
+  border-color: #F1F0F8;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: $primary;
+}
+
+.nav-tabs .nav-link.active{
+  color: $primary;
+  border-color: $primary;
 }
