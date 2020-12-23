@@ -10,7 +10,8 @@ current: index
 ---
 
 <!-- Banner starts -->
-<div class="banner-h">
+<div class="banner-h position-relative">
+  <!-- Swiper starts -->
   <!-- Slider main container -->
       <div class="swiper-container">
         <!-- Additional required wrapper -->
@@ -44,37 +45,43 @@ current: index
             </span>
         </div>
       </div>
-</div>
-<!-- Banner ends -->
-
-<!-- Search bar starts -->
-  <div class="container">
+  <!-- Swiper ends -->
+  
+  <!-- Search bar starts -->
+  <div class="search-bar-init container position-absolute">
     <div class="row justify-content-center">
       <div class="col-10">
-        <div class="bg-secondary p-10 d-flex">
-          <div class="input-wrapper position-relative">
-            <label for="destination" class="destination position-absolute">          
+        <!-- Form starts -->
+        <form class="bg-secondary p-10 d-flex custom-rounded-lg" action="#" method="POST">
+          <!-- Input starts -->
+          <div class="input-wrapper position-relative mr-6">
+            <label for="destination" class="search-bar-init__icon position-absolute">          
               <span class="material-icons">location_on</span>
             </label>
-            <input class="form-control form-control-lg pl-16" type="text" placeholder="Destination" id="destination">
+            <input class="form-control form-control-lg font-base pl-17 border-0" type="text" placeholder="Destination" id="destination" name="destination">
           </div>
 
-        </div>
+          <div class="input-wrapper position-relative mr-6">
+            <label for="date" class="search-bar-init__icon position-absolute">          
+              <span class="material-icons">date_range</span>
+            </label>
+            <input class="form-control form-control-lg font-base pl-17 border-0" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="">
+          </div>
+
+          <div class="input-wrapper position-relative mr-6">
+            <label for="guest" class="search-bar-init__icon position-absolute">          
+              <span class="material-icons">person</span>
+            </label>
+            <input class="form-control form-control-lg font-base pl-17 border-0" type="text" placeholder="Guests" id="guest" name="guest">
+          </div>
+          <!-- Input ends -->
+          <input type="submit" class="btn btn-primary py-6 px-13 font-weight-bold" value="SEARCH">
+        </form>
+        <!-- Form ends -->
       </div>
     </div>
   </div>
-<!-- Search bar ends -->
-
-
-<!-- Swiper JS-->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
+  <!-- Search bar ends -->
+  
+</div>
+<!-- Banner ends -->
