@@ -1,21 +1,21 @@
 /* Banner */
-.banner-h{
+.banner-h {
   height: 320px;
 }
 
 /* Search bar input icons */
-.search-bar-init{
+.search-bar-init {
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 2;
   transform: translateY(84%);
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     transform: translateY(50%);
   }
 
-  &__icon{
+  &__icon {
     top: 28px;
     left: 16px;
     transform: translateY(-50%);
@@ -24,10 +24,10 @@
 }
 
 /* Top choices */
-.top-choices-title{
+.top-choices-title {
   margin-top: 312px;
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     margin-top: 120px;
   }
 }
@@ -47,11 +47,11 @@
   border-color: $primary;
 }
 
-.nav-tabs .nav-link.active{
+.nav-tabs .nav-link.active {
   color: $primary;
   border-color: $primary;
 }
 
-.top-choices__img{
+.top-choices__img {
   height: 175px;
 }
