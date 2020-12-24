@@ -1,7 +1,18 @@
-.card__img-l {
-    height: 175px;
-}
+.card{
+    &-title{
+        font-size: get-font-size(base);
+    }
 
+    &-info{
+        font-size: get-font-size(s);
+        color: $info;
+
+        &-s{
+            font-size: get-font-size(xs);
+            color: $info;
+        }
+    }
+}
 
 .card-img-top {
     border-radius: $custom-border-radius-lg;

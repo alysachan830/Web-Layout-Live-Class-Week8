@@ -111,46 +111,100 @@ current: index
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="bali" role="tabpanel" aria-labelledby="bali-tab">
+    <div class="tab-pane fade show active position-relative" id="bali" role="tabpanel" aria-labelledby="bali-tab">
       
       <!-- Swiper -->
       <div class="swiper-container swiper-top-choices">
         <div class="swiper-wrapper">
-          <!-- <div class="row"> -->
-            <!-- <div class="col-3"> -->
               <div class="swiper-slide">
-                <div class="card">
-                  <img src="./assets/images/top1.jpg" class="card-img-top card__img-l" alt="hotel">
+                <a class="card" href="#">
+                  <img src="./assets/images/top1.jpg" class="top-choices__img card-img-top" alt="hotel">
                   <div class="card-body pl-0 pt-2">
-                    <h4 class="font-base mb-2">Hotel Aqua</h4>
+                    <h4 class="card-title mb-2">Hotel Aqua</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base mr-1">star</span>
+                      <span class="card-info">5.0</span>
+                      <span class="card-info-s text-info-light">・2k reviews</span>
+                    </div>
                     <div>
-                      <span class="material-icons">star</span>
-                      <span class="material-icons">star</span>
-                      <span class="material-icons">star</span>
-                      <span class="material-icons">star</span>
-                      <span class="material-icons">star</span>
-                      <span>5.0</span>
-                      <span>2k reviews</span>
+                      <span class="card-info mr-1">TWD 2,480</span>
+                      <del class="card-info-s text-info-light">TWD 3,980</del>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
-            <!-- </div> -->
 
             
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-            <div class="swiper-slide">Slide 10</div>
-          <!-- </div> -->
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/top2.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Mr. Kawasaki Inn</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・500 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 3,380</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/top3.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Weekly Paradise</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・470 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 4,780</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/top4.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Beast Hotel</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・283 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 1,980</span>
+                  </div>
+                </div>
+              </a>
+            </div>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next position-absolute swiper-top-choices__arrow">
+        <span class="material-icons text-dark">
+          keyboard_arrow_right
+          </span>
       </div>
 
     </div>

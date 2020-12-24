@@ -10,6 +10,12 @@
     }
 }
 
+/* Get font-size */
+
+@function get-font-size($size){
+    @return map-get($font-size, $size);
+}
+
 /* Title font-family */
 .font-title{
     font-family: $font-family-sans-serif-title !important;
