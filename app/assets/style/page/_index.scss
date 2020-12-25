@@ -1,9 +1,19 @@
 /* Banner */
+
+.banner {
+  margin-bottom: 312px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 120px;
+  }
+}
+
 .banner-h {
   height: 320px;
 }
 
 /* Search bar input icons */
+
 .search-bar-init {
   right: 0;
   left: 0;
@@ -24,13 +34,6 @@
 }
 
 /* Top choices */
-.top-choices-title {
-  margin-top: 312px;
-
-  @include media-breakpoint-up(lg) {
-    margin-top: 120px;
-  }
-}
 
 .nav-tabs {
   border-bottom: none;
@@ -57,6 +60,7 @@
 }
 
 /* Popular destinations */
+
 .popular-destinations {
 
   &__img {
