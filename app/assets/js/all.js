@@ -61,7 +61,12 @@ $(document).ready( () => {
   $('.js-popular-destinations-card').on( 'click', function(e){
     if(e.target.nodeName === 'A') {
       e.preventDefault();
+
+      // Show menu
       $(this).siblings().toggle();
+      
+      // Hide other menus
+      $(this).parents('.js-popular-destinations').siblings().find('.js-popular-destinations-menu').hide();
     }
   })
 });
