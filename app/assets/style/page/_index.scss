@@ -55,3 +55,16 @@
 .top-choices__img {
   height: 175px;
 }
+
+/* Popular destinations */
+.popular-destinations {
+
+  &__img {
+    height: 78px;
+  }
+  
+  &__menu {
+    display: none;
+    z-index: 2;
+  }
+}

@@ -1,6 +1,6 @@
 /* Image filter */
 
-.img-filter-dark::before{
+.img-filter--dark::before{
     content: "";
     background: rgba(0,0,0,0.5);
     position: absolute;
@@ -8,4 +8,19 @@
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+.img-filter--dark--linear{
+    content: "";
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &--rounded::before{
+        @extend .img-filter--dark--linear;
+        border-radius: $custom-border-radius-lg;
+    }
 }

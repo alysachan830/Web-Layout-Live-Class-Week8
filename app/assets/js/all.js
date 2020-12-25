@@ -55,4 +55,13 @@ $(document).ready( () => {
     });
   
   });
-})
+
+  // Popular Destinations dropdown menu 
+
+  $('.js-popular-destinations-card').on( 'click', function(e){
+    if(e.target.nodeName === 'A') {
+      e.preventDefault();
+      $(this).siblings().toggle();
+    }
+  })
+});
