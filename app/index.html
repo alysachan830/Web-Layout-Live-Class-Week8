@@ -46,12 +46,12 @@ current: index
             </div>
         </div>
         <!-- Navigation buttons -->
-        <div class="swiper-button-prev">
+        <div class="swiper-button-prev swiper-banner__button-prev">
           <span class="material-icons font-xl text-white">
             keyboard_arrow_left
             </span>
         </div>
-        <div class="swiper-button-next">
+        <div class="swiper-button-next swiper-banner__button-next">
           <span class="material-icons font-xl text-white">
             keyboard_arrow_right
             </span>
@@ -104,26 +104,27 @@ current: index
 
   <ul class="nav nav-tabs mb-10" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a class="nav-link active px-10" id="bali-tab" data-toggle="tab" href="#bali" role="tab" aria-controls="bali" aria-selected="true">
+      <a class="nav-link active px-10" id="top-choices-bali-tab" data-toggle="tab" href="#top-choices-bali" role="tab" aria-controls="top-choices-bali" aria-selected="true">
         <h3 class="font-title font-weight-bold font-m d-inline">Bali</h3>
         <sup class="font-title font-weight-bold font-s">128</sup>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link px-10" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+      <a class="nav-link px-10" id="top-choices-okinawa-tab" data-toggle="tab" href="#top-choices-okinawa" role="tab" aria-controls="top-choices-okinawa" aria-selected="false">
         <h3 class="font-title font-weight-bold font-m d-inline">Okinawa</h3>
         <sup class="font-title font-weight-bold font-s">67</sup>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link px-10" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+      <a class="nav-link px-10" id="top-choices-taipei-tab" data-toggle="tab" href="#top-choices-taipei" role="tab" aria-controls="top-choices-taipei" aria-selected="false">
         <h3 class="font-title font-weight-bold font-m d-inline">Taipei</h3>
         <sup class="font-title font-weight-bold font-s">53</sup>
       </a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active position-relative" id="bali" role="tabpanel" aria-labelledby="bali-tab">
+    <!-- Bali tab starts -->
+    <div class="tab-pane fade show active" id="top-choices-bali" role="tabpanel" aria-labelledby="top-choices-bali-tab">
       
       <!-- Swiper -->
       <div class="swiper-container swiper-top-choices">
@@ -211,32 +212,213 @@ current: index
               </a>
             </div>
         </div>
-      </div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next position-absolute swiper-top-choices__arrow">
-        <span class="material-icons text-dark">
-          keyboard_arrow_right
-          </span>
+        <!-- Add Arrows -->
+        <div class="swiper-top-choices__arrow swiper-button-next position-absolute d-flex justify-content-center align-items-center">
+          <span class="material-icons text-dark">
+            keyboard_arrow_right
+            </span>
+        </div>
       </div>
 
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    <!-- Bali tab ends -->
+    <!-- Okinawa tab starts -->
+    <div class="tab-pane fade" id="top-choices-okinawa" role="tabpanel" aria-labelledby="top-choices-okinawa-tab">
+      <!-- Swiper -->
+      <div class="swiper-container swiper-top-choices">
+        <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="card" href="#">
+                  <img src="./assets/images/Rachada1.jpg" class="top-choices__img card-img-top" alt="hotel">
+                  <div class="card-body pl-0 pt-2">
+                    <h4 class="card-title mb-2">Hotel Aqua</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base mr-1">star</span>
+                      <span class="card-info">5.0</span>
+                      <span class="card-info-s text-info-light">・2k reviews</span>
+                    </div>
+                    <div>
+                      <span class="card-info mr-1">TWD 2,480</span>
+                      <del class="card-info-s text-info-light">TWD 3,980</del>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/RangRak.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Mr. Kawasaki Inn</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・500 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 3,380</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/Watana1.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Weekly Paradise</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・470 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 4,780</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card" href="#">
+                <img src="./assets/images/Watana2.jpg" class="top-choices__img card-img-top" alt="hotel">
+                <div class="card-body pl-0 pt-2">
+                  <h4 class="card-title mb-2">Beast Hotel</h4>
+                  <div class="d-flex align-items-center mb-2">
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base">star</span>
+                      <span class="material-icons font-base mr-1">star</span>
+                    <span class="card-info">4.0</span>
+                    <span class="card-info-s text-info-light">・283 reviews</span>
+                  </div>
+                  <div>
+                    <span class="card-info mr-1">TWD 1,980</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-top-choices__arrow swiper-button-next position-absolute d-flex justify-content-center align-items-center">
+          <span class="material-icons text-dark">
+            keyboard_arrow_right
+            </span>
+        </div>
+      </div>
+    </div>
+    <!-- Okinawa tab ends -->
+    <!-- Taipei tab starts -->
+    <div class="tab-pane fade" id="top-choices-taipei" role="tabpanel" aria-labelledby="top-choices-taipei-tab">
+        <!-- Swiper -->
+        <div class="swiper-container swiper-top-choices">
+          <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="card" href="#">
+                    <img src="./assets/images/Bangkapi.jpg" class="top-choices__img card-img-top" alt="hotel">
+                    <div class="card-body pl-0 pt-2">
+                      <h4 class="card-title mb-2">Hotel Aqua</h4>
+                      <div class="d-flex align-items-center mb-2">
+                          <span class="material-icons font-base">star</span>
+                          <span class="material-icons font-base">star</span>
+                          <span class="material-icons font-base">star</span>
+                          <span class="material-icons font-base">star</span>
+                          <span class="material-icons font-base mr-1">star</span>
+                        <span class="card-info">5.0</span>
+                        <span class="card-info-s text-info-light">・2k reviews</span>
+                      </div>
+                      <div>
+                        <span class="card-info mr-1">TWD 2,480</span>
+                        <del class="card-info-s text-info-light">TWD 3,980</del>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+  
+              
+              <div class="swiper-slide">
+                <a class="card" href="#">
+                  <img src="./assets/images/Chatuchack1.jpg" class="top-choices__img card-img-top" alt="hotel">
+                  <div class="card-body pl-0 pt-2">
+                    <h4 class="card-title mb-2">Mr. Kawasaki Inn</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base mr-1">star</span>
+                      <span class="card-info">4.0</span>
+                      <span class="card-info-s text-info-light">・500 reviews</span>
+                    </div>
+                    <div>
+                      <span class="card-info mr-1">TWD 3,380</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+  
+              <div class="swiper-slide">
+                <a class="card" href="#">
+                  <img src="./assets/images/DinDaeng1.jpg" class="top-choices__img card-img-top" alt="hotel">
+                  <div class="card-body pl-0 pt-2">
+                    <h4 class="card-title mb-2">Weekly Paradise</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base mr-1">star</span>
+                      <span class="card-info">4.0</span>
+                      <span class="card-info-s text-info-light">・470 reviews</span>
+                    </div>
+                    <div>
+                      <span class="card-info mr-1">TWD 4,780</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+  
+              <div class="swiper-slide">
+                <a class="card" href="#">
+                  <img src="./assets/images/RangRak.jpg" class="top-choices__img card-img-top" alt="hotel">
+                  <div class="card-body pl-0 pt-2">
+                    <h4 class="card-title mb-2">Beast Hotel</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base">star</span>
+                        <span class="material-icons font-base mr-1">star</span>
+                      <span class="card-info">4.0</span>
+                      <span class="card-info-s text-info-light">・283 reviews</span>
+                    </div>
+                    <div>
+                      <span class="card-info mr-1">TWD 1,980</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-top-choices__arrow swiper-button-next d-flex justify-content-center align-items-center position-absolute">
+            <span class="material-icons text-dark">
+              keyboard_arrow_right
+              </span>
+          </div>
+        </div>
+    </div>
+    <!-- Taipei tab ends -->
+    
   </div>
 </div>
 <!-- Top Choices ends -->
-
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="./assets/images/top1.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
