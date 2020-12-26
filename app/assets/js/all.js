@@ -12,6 +12,24 @@ $(document).ready( function() {
     },
   });
 
+
+  // Search bar
+  // Choose destination from dropdown
+  $('.js-search-bar-init__item-destination').on( 'click', function(e){
+    e.preventDefault();
+    $('.js-search-bar-init__input-destination').val($(this).find('li:first-of-type').text());
+  });
+
+  // Guest count
+  $('js-search-bar-init__item-guests').on( 'click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+  
+    console.log($(this));
+    // return false;
+  })
+
+
   // .swiper-top-choices 
   // Initialize Swiper
 
