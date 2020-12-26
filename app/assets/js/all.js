@@ -18,7 +18,7 @@ $(document).ready( () => {
   var swiperTopChoices = new Swiper('.swiper-top-choices', {
     observer: true,
     observeParents: true,
-    slidesPerView: 2,
+    slidesPerView: 1.5,
     spaceBetween: 30,
     loop: true,
     autoplay: true,
@@ -76,7 +76,7 @@ $(document).ready( () => {
   // Initialize Swiper
 
   var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
-    slidesPerView: 1,
+    slidesPerView: 1.5,
     spaceBetween: 30,
     loop: true,
     navigation: {
