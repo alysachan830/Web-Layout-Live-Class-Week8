@@ -72,3 +72,17 @@
     z-index: 2;
   }
 }
+
+/* Get Inspiration */
+
+.get-inspiration-img {
+  height: 181px;
+
+  @include media-breakpoint-up(md) {
+    height: 158px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 263px;
+  }
+}

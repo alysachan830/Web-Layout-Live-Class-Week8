@@ -19,7 +19,7 @@ $(document).ready( () => {
     slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     navigation: {
       nextEl: '.swiper-button-next', 
       // prevEl: '.swiper-button-prev',
@@ -74,12 +74,9 @@ $(document).ready( () => {
   // Initialize Swiper
 
   var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
-    observer: true,
-    observeParents: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    // loop: true,
-    // autoplay: true,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next', 
       // prevEl: '.swiper-button-prev',
