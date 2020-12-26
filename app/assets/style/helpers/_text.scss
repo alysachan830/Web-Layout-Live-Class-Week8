@@ -1,0 +1,43 @@
+/* Make responsive font-size */
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $name, $size in $font-size{
+            .font#{$infix}-#{$name}{
+                font-size: $size !important;
+            }
+        }
+    }
+}
+
+/* Get font-size */
+
+@function get-font-size($size){
+    @return map-get($font-size, $size);
+}
+
+/* Title font-family */
+.font-title {
+    font-family: $font-family-sans-serif-title !important;
+}
+
+.font-text {
+    font-family: $font-family-sans-serif !important;
+}
+
+/* Font weight */
+.font-weight-lg-extra-bold {
+    @include media-breakpoint-up(lg){
+        font-weight: $font-weight-extra-bold !important;
+    }
+}
+
+.font-weight-md-extra-bold {
+    @include media-breakpoint-up(md){
+        font-weight: $font-weight-extra-bold !important;
+    }
+}
+
+.letter-spacing-m0125 {
+    letter-spacing: -0.5px;
+}
