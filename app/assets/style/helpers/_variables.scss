@@ -226,7 +226,7 @@ $paragraph-margin-bottom:   1rem !default;
 $grid-breakpoints: (
   xs: 0,
   s: 320px,
-  sm: 576px,
+  sm: 375px, //iPhone 6/7/8 width
   md: 768px,
   lg: 992px,
   xl: 1200px
