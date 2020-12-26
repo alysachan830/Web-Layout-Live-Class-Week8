@@ -55,7 +55,7 @@
   border-color: $primary;
 }
 
-.top-choices__img {
+.top-choices-img {
   height: 175px;
 }
 
@@ -63,11 +63,11 @@
 
 .popular-destinations {
 
-  &__img {
+  &-img {
     height: 78px;
   }
   
-  &__menu {
+  &-menu {
     display: none;
     z-index: 2;
   }

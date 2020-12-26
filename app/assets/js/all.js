@@ -69,4 +69,26 @@ $(document).ready( () => {
       $(this).parents('.js-popular-destinations').siblings().find('.js-popular-destinations-menu').hide();
     }
   })
+
+  // .swiper-get-inspiration in index.html
+  // Initialize Swiper
+
+  var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    // loop: true,
+    // autoplay: true,
+    navigation: {
+      nextEl: '.swiper-button-next', 
+      // prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    }
+  });
+
 });
