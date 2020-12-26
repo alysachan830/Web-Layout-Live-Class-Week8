@@ -1,4 +1,4 @@
-$(document).ready( () => {
+$(document).ready( function() {
 
   ////////// Index.html JS starts //////////
 
