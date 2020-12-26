@@ -1,6 +1,8 @@
 $(document).ready( () => {
 
-  // .swiper-banner in index.html
+  ////////// Index.html JS starts //////////
+
+  // .swiper-banner 
   // Initialize Swiper
   var swiperBanner = new Swiper('.swiper-banner', {
     loop: true,
@@ -10,7 +12,7 @@ $(document).ready( () => {
     },
   });
 
-  // .swiper-top-choices in index.html
+  // .swiper-top-choices 
   // Initialize Swiper
 
   var swiperTopChoices = new Swiper('.swiper-top-choices', {
@@ -36,7 +38,7 @@ $(document).ready( () => {
   });
 
 
-  // Date range picker in index.html
+  // Date range picker 
   $(function() {
 
     $('input[name="datefilter"]').daterangepicker({
@@ -70,7 +72,7 @@ $(document).ready( () => {
     }
   })
 
-  // .swiper-get-inspiration in index.html
+  // .swiper-get-inspiration 
   // Initialize Swiper
 
   var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
@@ -87,5 +89,7 @@ $(document).ready( () => {
       },
     }
   });
+
+  ////////// Index.html JS ends //////////
 
 });
