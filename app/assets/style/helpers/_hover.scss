@@ -1,0 +1,13 @@
+.hover {
+    &__bg--secondary {
+        &:hover {
+            background: $secondary;
+        }
+    }
+
+    &__text--primary {
+        &:hover {
+            color: $primary;
+        }
+    }
+}
