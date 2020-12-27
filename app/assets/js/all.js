@@ -15,19 +15,12 @@ $(document).ready( function() {
 
   // Search bar
   // Choose destination from dropdown
-  // $('.js-search-bar-init__item-destination').on( 'click', function(e){
-  //   e.preventDefault();
-  //   $('.js-search-bar-init__input-destination').val($(this).find('li:first-of-type').text());
-  // });
 
   $('.js-search-bar-destination').on( 'click', function(e){
     e.preventDefault();
     const destination = $(this).find('li:first-of-type').text();
-    // console.log(destination)
-    // console.log($(this).find('li:first-of-type').text())
-    // console.log($('.js-search-bar-destination').val($(this).find('li:first-of-type').text()));
 
-    const str1 = `
+    const destinationStr = `
     <div class="search-bar__content d-flex align-items-center">
       <span class="material-icons mr-6">location_on</span>
       <div>
@@ -36,9 +29,10 @@ $(document).ready( function() {
       </div>
     </div> 
     `
-    $('.js-destinations-input').html(str1);
-  });
 
+    // Show selected destinations
+    $('.js-destinations-input').html(destinationStr);
+  });
 
   // Guest count
 
@@ -58,7 +52,7 @@ $(document).ready( function() {
     return false;
   });
 
-  // Show guests count in input
+  // Show guests count 
 
   $('#js-dropdown-guests').on('hide.bs.dropdown', function () {
     
@@ -66,7 +60,7 @@ $(document).ready( function() {
     const childCount = parseInt($('.js-search-bar-guests-child-count').text());
     const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
 
-    const str = `
+    const guestsStr = `
     <div class="search-bar__content d-flex align-items-center">
       <span class="material-icons mr-6">person</span>
       <div>
@@ -76,12 +70,9 @@ $(document).ready( function() {
     </div> 
     `
 
-    $('.js-guests-input').html(str);
+    $('.js-guests-input').html(guestsStr);
 
   })
-
-
-
 
 
   // .swiper-top-choices 
