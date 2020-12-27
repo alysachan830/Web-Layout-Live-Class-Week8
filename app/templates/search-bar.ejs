@@ -1,53 +1,145 @@
-<div class="bg-secondary">
-    <form class="container" action="#">
+<div class="bg-secondary py-lg-10 py-md-6">
+    <!-- <form class="container d-flex" action="#"> -->
+    <form class="container d-flex py-6 px-14" action="#">
         <!-- Location starts -->
-        <div class="dropdown mr-lg-6 mb-lg-0 mb-6 w-100" id="js-dropdown-destinations">
-    
-            <a href="#" class="js-destinations-input d-block" id="guests" data-toggle="dropdown">
+        <div class="dropdown mr-lg-6 mr-md-2 w-100" id="js-dropdown-destinations">
+            <!-- <a href="#" class="js-destinations-input d-block" id="guests" data-toggle="dropdown">
                 <div class="search-bar__content d-flex align-items-center">
-                <span class="material-icons mr-6">location_on</span>
-                <span class="text-info w-100">Destination</span>  
-                </div>  
+                    <span class="material-icons mr-6">location_on</span>
+                    <div>
+                      <span class="search-bar__content__title">destination</span>
+                      <span class="search-bar__content__subtitle">Bangkok, Thailand</span>
+                    </div>
+                </div>
+            </a> -->
+
+            <a href="#" class="js-destinations-input d-block" id="guests" data-toggle="dropdown">
+                <div class="search-bar__content d-md-flex align-items-center d-none">
+                    <span class="material-icons mr-6">location_on</span>
+                    <div>
+                      <span class="search-bar__content__title">destination</span>
+                      <span class="search-bar__content__subtitle">Bangkok, Thailand</span>
+                    </div>
+                </div>
+                <span>Bangkok</span>
             </a>
 
             <div class="dropdown-menu w-100 mt-2 border-0 shadow" aria-labelledby="destination">
                 <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
-                <span class="material-icons mr-2">star</span>
-                <ul>
-                    <li>Bangkok</li>
-                    <li class="font-xs text-info d-block">Thailand</li>
-                </ul>
+                    <span class="material-icons mr-2">star</span>
+                    <ul>
+                        <li>Bangkok</li>
+                        <li class="font-xs text-info d-block">Thailand</li>
+                    </ul>
                 </a>
                 <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
-                <span class="material-icons mr-2">star</span>
-                <ul>
-                    <li>Osaka</li>
-                    <li class="font-xs text-info d-block">Japan</li>
-                </ul>
+                    <span class="material-icons mr-2">star</span>
+                    <ul>
+                        <li>Osaka</li>
+                        <li class="font-xs text-info d-block">Japan</li>
+                    </ul>
                 </a>
                 <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
-                <span class="material-icons mr-2">star</span>
-                <ul>
-                    <li>Roma</li>
-                    <li class="font-xs text-info d-block">Italy</li>
-                </ul>
+                    <span class="material-icons mr-2">star</span>
+                    <ul>
+                        <li>Roma</li>
+                        <li class="font-xs text-info d-block">Italy</li>
+                    </ul>
                 </a>
                 <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
-                <span class="material-icons mr-2">star</span>
-                <ul>
-                    <li>Paris</li>
-                    <li class="font-xs text-info d-block">London</li>
-                </ul>
+                    <span class="material-icons mr-2">star</span>
+                    <ul>
+                        <li>Paris</li>
+                        <li class="font-xs text-info d-block">London</li>
+                    </ul>
                 </a>
                 <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
-                <span class="material-icons mr-2">star</span>
-                <ul>
-                    <li>Reykjavík</li>
-                    <li class="font-xs text-info d-block">Iceland</li>
-                </ul>
+                    <span class="material-icons mr-2">star</span>
+                    <ul>
+                        <li>Reykjavík</li>
+                        <li class="font-xs text-info d-block">Iceland</li>
+                    </ul>
                 </a>
             </div>
+        </div>
+        <!-- Location ends -->
+        <!-- Data range starts -->
+        <div class="search-bar__content mr-lg-6 mr-md-2 d-md-flex d-none align-items-center w-100">
+            <div class="w-100 d-flex">
+                <label for="date" class="mr-4">          
+                    <span class="material-icons">date_range</span>
+                </label>
+                <input class="date-input bg-transparent border-0 font-s" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="06/17/2020 - 06/19/2020">
             </div>
-            <!-- Location ends -->
+        </div>
+        <input class="date-input bg-transparent border-0 font-s d-md-none" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="06/17/2020 - 06/19/2020">
+        <!-- Data range ends -->
+
+        <!-- Guest starts -->
+        <div class="dropdown mr-lg-6 mr-md-2 w-100" id="js-dropdown-guests">
+
+            <!-- <a href="#" class="js-guests-input d-block" id="guests" data-toggle="dropdown">
+
+              <div class="search-bar__content d-flex align-items-center">
+                <span class="material-icons mr-6">person</span>
+                <div>
+                  <span class="search-bar__content__title">guest</span>
+                  <span class="search-bar__content__subtitle">2 adults・1 room</span>
+                </div>
+              </div> 
+            </a> -->
+
+            <a href="#" class="js-guests-input d-block" id="guests" data-toggle="dropdown">
+
+                <div class="search-bar__content d-md-flex align-items-center d-none">
+                  <span class="material-icons mr-6">person</span>
+                  <div>
+                    <span class="search-bar__content__title">guest</span>
+                    <span class="search-bar__content__subtitle">2 adults・1 room</span>
+                  </div>
+                </div> 
+            </a>
+
+            <div class="dropdown-menu w-100 mt-2 border-0 shadow" aria-labelledby="guests">
+              <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                  <div>Adult</div>
+                  <div>
+                    <a href="#">
+                      <span class="material-icons mr-6">remove</span>
+                    </a>
+                    <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-adult-count">0</span>
+                    <a href="#">
+                      <span class="material-icons">add</span>
+                    </a>
+                  </div>
+              </div>
+              <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                <div>Child</div>
+                <div>
+                  <a href="#">
+                    <span class="material-icons mr-6">remove</span>
+                  </a>
+                  <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-child-count">0</span>
+                  <a href="#">
+                    <span class="material-icons">add</span>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                <div>Room</div>
+                <div>
+                  <a href="#">
+                    <span class="material-icons mr-6">remove</span>
+                  </a>
+                  <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-room-count">0</span>
+                  <a href="#">
+                    <span class="material-icons">add</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Guest ends -->
+        <input type="submit" class="btn btn-primary py-6 px-13 font-weight-bold w-lg-auto w-100" value="SEARCH">
     </form>
 </div>

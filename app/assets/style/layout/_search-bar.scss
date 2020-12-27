@@ -1,0 +1,6 @@
+.date-input {
+
+    @include media-breakpoint-up(md) {
+        min-width: 100%;
+    }
+}
