@@ -15,14 +15,63 @@ $(document).ready( function() {
 
   // Search bar
   // Choose destination from dropdown
-  $('.js-search-bar-init__item-destination').on( 'click', function(e){
+
+  $('.js-search-bar-destination').on( 'click', function(e){
     e.preventDefault();
-    $('.js-search-bar-init__input-destination').val($(this).find('li:first-of-type').text());
+    const destination = $(this).find('li:first-of-type').text();
+
+    const destinationStr = `
+    <div class="search-bar__content d-flex align-items-center">
+      <span class="material-icons mr-6">location_on</span>
+      <div>
+        <span class="search-bar__content__title">destination</span>
+        <span class="search-bar__content__subtitle">${destination}</span>
+      </div>
+    </div> 
+    `
+
+    // Show selected destinations
+    $('.js-destinations-input').html(destinationStr);
   });
 
   // Guest count
-  $('.js-search-bar-init__item-guests').on( 'click', function(e){
+
+  $('.js-search-bar-guests').on( 'click', function(e){
+
+    let count = parseInt($(this).find('.js-search-bar-guests-count').text());
+
+    if (e.target.innerHTML === 'remove' && count > 0) {
+      count -= 1;
+    }
+    else if (e.target.innerHTML === 'add') {
+      count += 1;
+    }
+    // Show count on dropdown
+    $(this).find('.js-search-bar-guests-count').text(count)
+
     return false;
+  });
+
+  // Show guests count 
+
+  $('#js-dropdown-guests').on('hide.bs.dropdown', function () {
+    
+    const adultCount = parseInt($('.js-search-bar-guests-adult-count').text());
+    const childCount = parseInt($('.js-search-bar-guests-child-count').text());
+    const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
+
+    const guestsStr = `
+    <div class="search-bar__content d-flex align-items-center">
+      <span class="material-icons mr-6">person</span>
+      <div>
+        <span class="search-bar__content__title">guest</span>
+        <span class="search-bar__content__subtitle">${adultCount} adult・${childCount} child・${roomCount} room</span>
+      </div>
+    </div> 
+    `
+
+    $('.js-guests-input').html(guestsStr);
+
   })
 
 
