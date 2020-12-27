@@ -21,12 +21,8 @@ $(document).ready( function() {
   });
 
   // Guest count
-  $('js-search-bar-init__item-guests').on( 'click', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-  
-    console.log($(this));
-    // return false;
+  $('.js-search-bar-init__item-guests').on( 'click', function(e){
+    return false;
   })
 
 
