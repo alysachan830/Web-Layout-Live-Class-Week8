@@ -7,8 +7,20 @@
 @import "base/base";
 
 /* Helpers */;
-@import "helpers/font";
+@import "helpers/text";
+@import "helpers/border";
+@import "helpers/width";
+@import "helpers/image";
+@import "helpers/hover";
+@import "helpers/dropdown";
+
+/* components */
+@import "components/vendor";
+@import "components/card";
+@import "components/search-bar";
 
 /* Layout */
 @import "layout/navbar";
 
+/* Page */
+@import "page/index";

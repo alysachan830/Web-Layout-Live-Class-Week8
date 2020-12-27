@@ -1,0 +1,88 @@
+/* Banner */
+
+.banner {
+  margin-bottom: 312px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 120px;
+  }
+}
+
+.banner-h {
+  height: 320px;
+}
+
+/* Search bar input icons */
+
+.search-bar-init {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: translateY(84%);
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(50%);
+  }
+
+  &__icon {
+    top: 28px;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+
+}
+
+/* Top choices */
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: 0;
+  border-color: #F1F0F8;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: $primary;
+}
+
+.nav-tabs .nav-link.active {
+  color: $primary;
+  border-color: $primary;
+}
+
+.top-choices-img {
+  height: 175px;
+}
+
+/* Popular destinations */
+
+.popular-destinations {
+
+  &-img {
+    height: 78px;
+  }
+  
+  &-menu {
+    display: none;
+    z-index: 2;
+  }
+}
+
+/* Get Inspiration */
+
+.get-inspiration-img {
+  height: 181px;
+
+  @include media-breakpoint-up(md) {
+    height: 158px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 263px;
+  }
+}

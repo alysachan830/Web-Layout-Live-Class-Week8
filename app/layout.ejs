@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <!-- Swiper CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Date range picker CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- all.css -->
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
@@ -18,18 +25,33 @@
       <%- include('templates/navbar.ejs'); %>
     <% } %>
 
+    <% if (searchBar) { %>
+      <%- include('templates/search-bar.ejs'); %>
+    <% } %>
+
     <%- contents %>
 
     <% if (title === 'ALOHA | Discover your ideal hotel') { %>
       <%- include('templates/subscribe-l.ejs'); %>
     <% } %>
 
-    <% if (footer) { %>
-      <%- include('templates/footer.ejs'); %>
+    <% if (subscribe) { %>
+      <%- include('templates/subscribe.ejs'); %>
     <% } %>
 
 
+    <% if (footerFull) { %>
+      <%- include('templates/footer-full.ejs'); %>
+    <% } %>
+
+    <!-- Swiper JS-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Vendors.js -->
     <script src="./assets/js/vendors.js"></script>
+    <!-- Date range picker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- all.js -->
     <script src="./assets/js/all.js"></script>
   </body>
 
