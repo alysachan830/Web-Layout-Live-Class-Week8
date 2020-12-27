@@ -25,6 +25,10 @@
       <%- include('templates/navbar.ejs'); %>
     <% } %>
 
+    <% if (searchBar) { %>
+      <%- include('templates/search-bar.ejs'); %>
+    <% } %>
+
     <%- contents %>
 
     <% if (title === 'ALOHA | Discover your ideal hotel') { %>
