@@ -2,9 +2,13 @@
 
     &__content {
         height: 56px;
-        padding: 0 16px;
+        padding: 0 8px;
         background: #fff;
         border-radius: $custom-border-radius;    
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 16px;
+        }
 
         &__title {
             font-size: get-font-size(xs);
@@ -17,7 +21,7 @@
             font-size: get-font-size(s);
             display: block;
             color: $info;
-            white-space: nowrap;
+            // white-space: nowrap;
         }
     }
 }

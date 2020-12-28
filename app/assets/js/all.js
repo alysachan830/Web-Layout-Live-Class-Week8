@@ -20,19 +20,28 @@ $(document).ready( function() {
     e.preventDefault();
     const destination = $(this).find('li:first-of-type').text();
 
-    const destinationStr = `
-    <div class="search-bar__content d-flex align-items-center">
-      <span class="material-icons mr-6">location_on</span>
-      <div>
-        <span class="search-bar__content__title">destination</span>
-        <span class="search-bar__content__subtitle">${destination}</span>
-      </div>
-    </div> 
-    `
-
+    const searchBarDestination = `
+    <span class="search-bar__content__subtitle">${destination}</span>
+`
     // Show selected destinations
-    $('.js-destinations-input').html(destinationStr);
+
+    $('.js-destinations-input').html(searchBarDestination);
+
+    // Show title
+    $(this).parent().siblings().find('.search-bar__content__title').show();
   });
+
+  // Check-in / out 
+
+  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+    
+    // Show Check-in / out title
+    $(this).siblings('.search-bar__content__title').show();
+
+    // Adjust font-size
+    $(this).css('font-size','14px');
+  });
+
 
   // Guest count
 
@@ -60,20 +69,22 @@ $(document).ready( function() {
     const childCount = parseInt($('.js-search-bar-guests-child-count').text());
     const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
 
-    const guestsStr = `
-    <div class="search-bar__content d-flex align-items-center">
-      <span class="material-icons mr-6">person</span>
-      <div>
-        <span class="search-bar__content__title">guest</span>
-        <span class="search-bar__content__subtitle">${adultCount} adult・${childCount} child・${roomCount} room</span>
-      </div>
-    </div> 
-    `
+    // const searchBarInitGuests = `
+    //   <span class="search-bar__content__title">guest</span>
+    //   <span class="search-bar__content__subtitle font-xs text-nowrap">${adultCount} adult・${childCount} child・${roomCount} room</span>
+    // `
 
-    $('.js-guests-input').html(guestsStr);
+    const searchBarGuests = `
+    <span class="search-bar__content__subtitle font-xs text-nowrap">${adultCount} adult・${childCount} child・${roomCount} room</span>
+  `
+    // Show guests count number
+    $('.js-guests-input').html(searchBarGuests);
 
+    // Show guests title
+    $(this).find('.search-bar__content__title').show();
   })
 
+  // <span class="search-bar__content__title">Check-in / out</span>
 
   // .swiper-top-choices 
   // Initialize Swiper
@@ -112,7 +123,8 @@ $(document).ready( function() {
     });
   
     $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('DD MMM') + ' - ' + picker.endDate.format('DD MMM'));
+        // $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
     });
   
     $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
