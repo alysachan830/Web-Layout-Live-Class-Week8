@@ -12,10 +12,12 @@
 @import "helpers/width";
 @import "helpers/image";
 @import "helpers/hover";
+@import "helpers/dropdown";
 
 /* components */
 @import "components/vendor";
 @import "components/card";
+@import "components/search-bar";
 
 /* Layout */
 @import "layout/navbar";
