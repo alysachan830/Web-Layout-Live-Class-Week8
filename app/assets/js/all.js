@@ -1,7 +1,5 @@
 $(document).ready( function() {
 
-  ////////// Index.html JS starts //////////
-
   // .swiper-banner 
   // Initialize Swiper
   var swiperBanner = new Swiper('.swiper-banner', {
@@ -34,7 +32,7 @@ $(document).ready( function() {
   // Check-in / out 
 
   $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
-    
+
     // Show Check-in / out title
     $(this).siblings('.search-bar__content__title').show();
 
@@ -75,7 +73,7 @@ $(document).ready( function() {
     // `
 
     const searchBarGuests = `
-    <span class="search-bar__content__subtitle font-xs text-nowrap">${adultCount} adult・${childCount} child・${roomCount} room</span>
+    <span class="search-bar__content__subtitle font-xs">${adultCount} adult・${childCount} child・${roomCount} room</span>
   `
     // Show guests count number
     $('.js-guests-input').html(searchBarGuests);
@@ -164,7 +162,5 @@ $(document).ready( function() {
       },
     }
   });
-
-  ////////// Index.html JS ends //////////
 
 });
