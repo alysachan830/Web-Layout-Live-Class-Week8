@@ -1,4 +1,4 @@
-$(document).ready( function() {
+$(document).ready(function() {
 
   // .swiper-banner 
   // Initialize Swiper
@@ -180,34 +180,45 @@ $(document).ready( function() {
     }
   )
 
-// noUiSlider
+  // noUiSlider
 
-var slider = document.getElementById('slider');
+  var slider = document.getElementById('slider');
 
-noUiSlider.create(slider, {
-    start: [800, 4000],
-    connect: true,
-    range: {
-        'min': 800,
-        'max': 4000
-    },
-    
-});
+  // console.log(slider)
 
-function showBudget() {
-  const budgetMin = parseInt(slider.noUiSlider.get()[0]);
-  const budgetMax = parseInt(slider.noUiSlider.get()[1]);
-  $('.js-budget-min').text(budgetMin);
-  $('.js-budget-max').text(budgetMax);  
-}
+  noUiSlider.create(slider, {
+      start: [800, 4000],
+      connect: true,
+      range: {
+          'min': 800,
+          'max': 4000
+      },
+      
+  });
 
-showBudget();
+  function showBudget() {
+    const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+    const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+    $('.js-budget-min').text(budgetMin);
+    $('.js-budget-max').text(budgetMax);  
+  }
+
+  showBudget();
 
 
-slider.noUiSlider.on('slide', function(){
-    showBudget();
+  slider.noUiSlider.on('slide', function(){
+      showBudget();
+  })
+
+  // Open filter in mobile version
+
+  // $('.js-filter-btn').on( 'click', function() {
+  //   $('.js-filter').slideToggle();
+  // })
+
+  $('.js-filter-btn').click(function(){
+    $('.js-filter').slideToggle();
   })
 });
-
 
 /////////////// hotel-list ends ///////////////
