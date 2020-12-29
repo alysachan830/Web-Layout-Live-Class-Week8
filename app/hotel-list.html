@@ -9,3 +9,188 @@ footer: false
 engine: ejs
 current: index
 ---
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="mb-10">Bangkok
+                <sup class="font-base text-primary">3,240</sup>
+            </h2>
+            <div class="bg-secondary p-10 custom-rounded-lg">
+                <!-- Deal starts -->
+                <div class="border-bottom border-white pb-10 mb-10">
+                    <p class="font-weight-bold mb-6">Deals</p>
+                    <ul>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="FreeCancellation">
+                                <label class="custom-control-label text-info" for="FreeCancellation">Free cancellation</label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="noPrepayment">
+                                <label class="custom-control-label text-info" for="noPrepayment">No prepayment</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialOffers">
+                                <label class="custom-control-label text-info" for="specialOffers">Special offers</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Deal ends -->
+                <!-- Popular filter starts -->
+                <div class="border-bottom border-white pb-10 mb-10">
+                    <p class="font-weight-bold mb-6">Popular filter</p>
+                    <ul>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="breakfastIncluded">
+                                <label class="custom-control-label text-info" for="breakfastIncluded">Breakfast included</label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="freeWi-Fi">
+                                <label class="custom-control-label text-info" for="freeWi-Fi">Free Wi-Fi</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="swimmingPool">
+                                <label class="custom-control-label text-info" for="swimmingPool">Swimming pool</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Popular filter ends -->
+                <!-- Budget starts -->
+                <div class="border-bottom border-white pb-10 mb-10">
+                    <p class="font-weight-bold mb-6">Budget</p>
+                    <div class="mb-6">
+                        <div id="slider">
+                        </div>
+                    </div>
+                    <ul class="d-flex justify-content-between align-items-center">
+                        <li class="bg-white p-2 w-50 custom-rounded">
+                            <span class="text-uppercase font-xs font-weight-bold">Min price</span>
+                            <p class="font-xs text-info">TWD
+                                <span class="js-budget-min"></span>
+                            </p>
+                        </li>
+                        <li class="px-2">-</li>
+                        <li class="bg-white p-2 w-50 custom-rounded">
+                            <span class="text-uppercase font-xs font-weight-bold">Max price</span>
+                            <p class="font-xs text-info">TWD
+                                <span class="js-budget-max"></span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Budget ends -->
+                <!-- Rating starts -->
+                <div class="border-bottom border-white pb-10 mb-10">
+                    <p class="font-weight-bold mb-6">Rating</p>
+                    <ul>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="5stars">
+                                <label class="custom-control-label" for="5stars">
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="text-info">5.0</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="4stars">
+                                <label class="custom-control-label" for="4stars">
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="text-info">4.0</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="3stars">
+                                <label class="custom-control-label" for="3stars">
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="text-info">3.0</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="2stars">
+                                <label class="custom-control-label" for="2stars">
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="text-info">2.0</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="1star">
+                                <label class="custom-control-label" for="1star">
+                                    <span class="material-icons font-m align-text-top">star</span>
+                                    <span class="text-info">1.0</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="unrated">
+                                <label class="custom-control-label text-info" for="unrated">Unrated</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Rating ends -->
+                <!-- Stay type starts -->
+                <div>
+                    <p class="font-weight-bold mb-6">Stay type</p>
+                    <ul>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="hotel">
+                                <label class="custom-control-label text-info" for="hotel">Hotel</label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="apartment">
+                                <label class="custom-control-label text-info" for="apartment">Apartment</label>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="unique">
+                                <label class="custom-control-label text-info" for="unique">Unique</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="hostel">
+                                <label class="custom-control-label text-info" for="hostel">Hostel</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Stay type ends -->
+            </div>
+        </div>
+    </div>
+</div>

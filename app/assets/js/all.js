@@ -67,11 +67,6 @@ $(document).ready( function() {
     const childCount = parseInt($('.js-search-bar-guests-child-count').text());
     const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
 
-    // const searchBarInitGuests = `
-    //   <span class="search-bar__content__title">guest</span>
-    //   <span class="search-bar__content__subtitle font-xs text-nowrap">${adultCount} adult・${childCount} child・${roomCount} room</span>
-    // `
-
     const searchBarGuests = `
     <span class="search-bar__content__subtitle font-xs">${adultCount} adult・${childCount} child・${roomCount} room</span>
   `
@@ -82,7 +77,6 @@ $(document).ready( function() {
     $(this).find('.search-bar__content__title').show();
   })
 
-  // <span class="search-bar__content__title">Check-in / out</span>
 
   // .swiper-top-choices 
   // Initialize Swiper
@@ -163,4 +157,34 @@ $(document).ready( function() {
     }
   });
 
+
 });
+
+
+// noUiSlider
+
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [800, 4000],
+    connect: true,
+    range: {
+        'min': 800,
+        'max': 4000
+    },
+    
+});
+
+function showBudget() {
+  const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+  const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+  $('.js-budget-min').text(budgetMin);
+  $('.js-budget-max').text(budgetMax);  
+}
+
+showBudget();
+
+
+slider.noUiSlider.on('slide', function(){
+  showBudget();
+})
