@@ -14,14 +14,14 @@ current: index
     <div class="row">
         <!-- Title starts -->
         <div class="col-md-4">
-            <h2 class="mb-10">Bangkok
+            <h2 class="mb-md-10 mb-2 text-md-left text-center">Bangkok
                 <sup class="font-base text-primary">3,240</sup>
             </h2>
         </div>
         <!-- Title ends -->
-        <!-- Sort starts -->
-        <div class="col-md-8">
-            <ul class="d-flex mb-10">
+        <!-- Filter and sort bar starts -->
+        <div class="col-md-8 mb-2">
+            <ul class="sort mb-10">
                 <li class="mr-10">
                     <a class="font-weight-bold text-primary" href="#">Recommended</a>
                 </li>
@@ -35,13 +35,27 @@ current: index
                     <a class="font-weight-bold" href="#">Distance to City Center</a>
                 </li>
             </ul>
+            <ul class="d-md-none d-flex justify-content-around">
+                <li class="w-50 border-right">
+                    <a class="text-uppercase font-weight-bold py-6 text-center d-block" href="#">
+                        <span class="material-icons">filter_list</span>
+                        Filter
+                    </a>
+                </li>
+                <li class="w-50">
+                    <a class="text-uppercase font-weight-bold py-6 text-center d-block" href="#">
+                        <span class="material-icons">sort</span>
+                        Sort
+                    </a>
+                </li>
+            </ul>
         </div>
-        <!-- Sort ends -->
+        <!-- Filter and sort bar ends -->
     </div>
     <div class="row">
         <!-- Filter starts -->
         <div class="col-md-4">
-            <div class="bg-secondary p-10 custom-rounded-lg">
+            <div class="filter bg-secondary p-10 custom-rounded-lg">
                 <!-- Deal starts -->
                 <div class="border-bottom border-white pb-10 mb-10">
                     <p class="font-weight-bold mb-6">Deals</p>
