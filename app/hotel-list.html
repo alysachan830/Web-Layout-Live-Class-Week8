@@ -3,7 +3,7 @@ title: ALOHA | Bangkok
 layout: ./app/layout.ejs
 navbar: true
 searchBar: true
-subscribe: false
+subscribe: true
 footerFull: true
 footer: false
 engine: ejs
@@ -12,11 +12,14 @@ current: index
 
 <div class="container pt-10 pb-16">
     <div class="row">
+        <!-- Title starts -->
         <div class="col-md-4">
             <h2 class="mb-10">Bangkok
                 <sup class="font-base text-primary">3,240</sup>
             </h2>
         </div>
+        <!-- Title ends -->
+        <!-- Sort starts -->
         <div class="col-md-8">
             <ul class="d-flex mb-10">
                 <li class="mr-10">
@@ -33,6 +36,7 @@ current: index
                 </li>
             </ul>
         </div>
+        <!-- Sort ends -->
     </div>
     <div class="row">
         <!-- Filter starts -->
@@ -238,12 +242,90 @@ current: index
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-next">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                        <span class="material-icons text-dark ">
+                                            keyboard_arrow_right
+                                            </span>
+                                    </div>
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                        <span class="material-icons text-dark ">
+                                            keyboard_arrow_left
+                                            </span>
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="col-8">
+                            <div class="card-body p-lg-6 p-2 d-md-block d-flex flex-column justify-content-between h-100">
+                                <div>
+                                    <div class="d-md-flex justify-content-between">
+                                        <div>
+                                            <h3 class="font-xs font-text text-primary mb-1">Rachada, Bangkok
+                                                <span class="text-info font-xs d-lg-inline d-none">・2 km from center</span>
+                                            </h3>
+                                            <h2 class="card-title font-lg-l font-base mb-md-4 mb-1">Rachada Hotel</h5>
+                                        </div>
+                                        <div>
+                                            <span class="material-icons font-m align-text-top">star</span>
+                                            <span class="material-icons font-m align-text-top">star</span>
+                                            <span class="material-icons font-m align-text-top">star</span>
+                                            <span class="material-icons font-m align-text-top">star</span>
+                                            <span class="font-lg-s font-xs text-info d-lg-inline d-md-block text-right">4.0 (283)</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-info font-weight-bold font-s">Deluxe Double Room</p>
+                                    <p class="text-info font-xs mb-lg-6 mb-2">2 guests・1 bed (Queen size)</p>
+                                </div>
+                                <div class="d-md-flex justify-content-md-between">
+                                    <ul class="d-lg-flex d-md-block d-none">
+                                        <li class="mr-1 mb-lg-0 mb-1">
+                                            <span class="bg-secondary rounded-pill text-info font-lg-xs font-xxs py-1 px-2 d-inline-block">
+                                                Free cancellation
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="bg-secondary rounded-pill text-info font-lg-xs font-xxs py-1 px-2 d-inline-block">
+                                                No prepayment
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="align-self-end">
+                                        <p class="font-xs text-info text-right d-md-block d-none">per night</p>
+                                        <h3 class="font-lg-l font-base text-right">TWD 1,980</h3>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
+                    <a class="card hover__bg--shadow" href="#">
+                        <div class="row no-gutters">
+                          <div class="col-4">
+                                <!-- Swiper -->
+                                <div class="swiper-container js-swiper-hotel-list">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Add Arrows -->
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-prev">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -316,12 +398,12 @@ current: index
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-next">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-prev">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -394,12 +476,12 @@ current: index
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-next">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-prev">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -472,12 +554,12 @@ current: index
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-next">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-prev">
+                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -529,85 +611,7 @@ current: index
                     </a>
                 </li>
 
-                <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
-                    <a class="card hover__bg--shadow" href="#">
-                        <div class="row no-gutters">
-                          <div class="col-4">
-                                <!-- Swiper -->
-                                <div class="swiper-container js-swiper-hotel-list">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-next">
-                                        <span class="material-icons text-dark">
-                                            keyboard_arrow_right
-                                            </span>
-                                    </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow swiper-button-prev">
-                                        <span class="material-icons text-dark">
-                                            keyboard_arrow_left
-                                            </span>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="col-8">
-                            <div class="card-body p-lg-6 p-2 d-md-block d-flex flex-column justify-content-between h-100">
-                                <div>
-                                    <div class="d-md-flex justify-content-between">
-                                        <div>
-                                            <h3 class="font-xs font-text text-primary mb-1">Rachada, Bangkok
-                                                <span class="text-info font-xs d-lg-inline d-none">・2 km from center</span>
-                                            </h3>
-                                            <h2 class="card-title font-lg-l font-base mb-md-4 mb-1">Rachada Hotel</h5>
-                                        </div>
-                                        <div>
-                                            <span class="material-icons font-m align-text-top">star</span>
-                                            <span class="material-icons font-m align-text-top">star</span>
-                                            <span class="material-icons font-m align-text-top">star</span>
-                                            <span class="material-icons font-m align-text-top">star</span>
-                                            <span class="font-lg-s font-xs text-info d-lg-inline d-md-block text-right">4.0 (283)</span>
-                                        </div>
-                                    </div>
-                                    <p class="text-info font-weight-bold font-s">Deluxe Double Room</p>
-                                    <p class="text-info font-xs mb-lg-6 mb-2">2 guests・1 bed (Queen size)</p>
-                                </div>
-                                <div class="d-md-flex justify-content-md-between">
-                                    <ul class="d-lg-flex d-md-block d-none">
-                                        <li class="mr-1 mb-lg-0 mb-1">
-                                            <span class="bg-secondary rounded-pill text-info font-lg-xs font-xxs py-1 px-2 d-inline-block">
-                                                Free cancellation
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="bg-secondary rounded-pill text-info font-lg-xs font-xxs py-1 px-2 d-inline-block">
-                                                No prepayment
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="align-self-end">
-                                        <p class="font-xs text-info text-right d-md-block d-none">per night</p>
-                                        <h3 class="font-lg-l font-base text-right">TWD 1,980</h3>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </a>
-                </li>
 
-                
             </ul>
         </div>
         <!-- Hotel list ends -->
