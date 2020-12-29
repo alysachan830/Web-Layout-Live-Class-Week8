@@ -91,4 +91,9 @@
     .material-icons {
         font-size: 14px;
     }
+
+    @include media-breakpoint-up(md) {
+        width: 30px;
+        height: 30px;
+    }
 }
