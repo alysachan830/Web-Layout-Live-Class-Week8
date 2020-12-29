@@ -1,6 +1,20 @@
-.custom-rounded{
+.custom-rounded {
     border-radius: $custom-border-radius !important;
 }
-.custom-rounded-lg{
+
+.custom-rounded-lg {
     border-radius: $custom-border-radius-lg !important;
+}
+
+.rounded-lg-md-left {
+    @include media-breakpoint-up(md) {
+        border-top-left-radius: $custom-border-radius-lg !important;
+        border-bottom-left-radius: $custom-border-radius-lg !important;    
+    }
+}
+
+.border-md-bottom {
+    @include media-breakpoint-up(md) {
+        border-bottom: $border-width solid $border-color !important;
+    }
 }

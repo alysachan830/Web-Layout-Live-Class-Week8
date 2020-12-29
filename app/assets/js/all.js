@@ -157,9 +157,28 @@ $(document).ready( function() {
     }
   });
 
+  /////////////// hotel-list starts ///////////////
 
-});
+  var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next', 
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
+  // Swiper
+  // Show swiper buttons when hover
+
+  $('.js-hotel-list-card').hover(
+    function() {
+      $(this).find('.hotel-list-card-arrow').css('display','flex');
+    }, function() {
+      $(this).find('.hotel-list-card-arrow').css('display','none');
+    }
+  )
 
 // noUiSlider
 
@@ -186,5 +205,9 @@ showBudget();
 
 
 slider.noUiSlider.on('slide', function(){
-  showBudget();
-})
+    showBudget();
+  })
+});
+
+
+/////////////// hotel-list ends ///////////////
