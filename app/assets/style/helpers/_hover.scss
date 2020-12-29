@@ -1,13 +1,19 @@
 .hover {
     &__bg--secondary {
         &:hover {
-            background: $secondary;
+            background: $secondary !important;
         }
     }
 
     &__text--primary {
         &:hover {
-            color: $primary;
+            color: $primary !important;
+        }
+    }
+    
+    &__bg--shadow {
+        &:hover {
+            box-shadow: $box-shadow !important;
         }
     }
 }

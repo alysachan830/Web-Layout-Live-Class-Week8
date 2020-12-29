@@ -1,3 +1,5 @@
+// @import "../../../node_modules/jquery-ui/themes/base/";
+
 /* Bootstrap */
 @import "functions";
 @import "./helpers/variables";
@@ -12,13 +14,19 @@
 @import "helpers/width";
 @import "helpers/image";
 @import "helpers/hover";
+@import "helpers/dropdown";
+@import "helpers/custom-form";
 
 /* components */
-@import "components/vendor";
+@import "components/swiper";
 @import "components/card";
+@import "components/search-bar";
+@import "components/noUiSlider";
+
 
 /* Layout */
 @import "layout/navbar";
 
 /* Page */
 @import "page/index";
+@import "page/hotel-list";

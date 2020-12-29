@@ -1,0 +1,25 @@
+.hotel-list-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotel-list-card-arrow {
+    display: none;
+}
+
+.sort {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+}
+
+.filter {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}

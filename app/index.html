@@ -2,6 +2,7 @@
 title: ALOHA | Discover your ideal hotel
 layout: ./app/layout.ejs
 navbar: true
+searchBar: false
 subscribe: false
 footerFull: true
 footer: false
@@ -60,32 +61,132 @@ current: index
   <!-- Swiper ends -->
   
   <!-- Search bar starts -->
-  <div class="search-bar-init container position-absolute">
+  <div class="search-bar-init js-search-bar-init container position-absolute">
     <div class="row justify-content-center">
       <div class="col-10">
         <!-- Form starts -->
-        <form class="bg-secondary p-10 d-lg-flex custom-rounded-lg" action="#" method="POST">
-          <!-- Input starts -->
-          <div class="input-wrapper position-relative mr-lg-6 mb-lg-0 mb-6">
-            <label for="destination" class="search-bar-init__icon position-absolute">          
-              <span class="material-icons">location_on</span>
-            </label>
-            <input class="form-control form-control-lg font-sm-base font-xs pl-17 border-0" type="text" placeholder="Destination" id="destination" name="destination">
-          </div>
+        <form class="bg-secondary p-10 d-lg-flex custom-rounded-lg" action="#">
+            <!-- Input starts -->
 
-          <div class="input-wrapper position-relative mr-lg-6 mb-lg-0 mb-6">
-            <label for="date" class="search-bar-init__icon position-absolute">          
-              <span class="material-icons">date_range</span>
-            </label>
-            <input class="form-control form-control-lg font-sm-base font-xs pl-17 border-0" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="">
-          </div>
+            <!-- Location starts -->
+            <div class="dropdown mr-lg-6 mb-lg-0 mb-6 w-100" id="js-dropdown-destinations">
+              
+              <a href="#" class="d-block" id="guests" data-toggle="dropdown">
+                <div class="search-bar__content d-flex align-items-center">
+                  <span class="material-icons mr-6">location_on</span>
+                  <div>
+                    <span class="search-bar__content__title">Destination</span>
+                    <div class="js-destinations-input text-info w-100">Destination</div>  
+                  </div>
+                </div>  
+              </a>
 
-          <div class="input-wrapper position-relative mr-lg-6 mb-lg-0 mb-6">
-            <label for="guest" class="search-bar-init__icon position-absolute">          
-              <span class="material-icons">person</span>
-            </label>
-            <input class="form-control form-control-lg font-sm-base font-xs pl-17 border-0" type="text" placeholder="Guests" id="guest" name="guest">
-          </div>
+              <div class="dropdown-menu w-100 mt-2 border-0 shadow" aria-labelledby="destination">
+                <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
+                  <span class="material-icons mr-2">star</span>
+                  <ul>
+                    <li>Bangkok</li>
+                    <li class="font-xs text-info d-block">Thailand</li>
+                  </ul>
+                </a>
+                <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
+                  <span class="material-icons mr-2">star</span>
+                  <ul>
+                    <li>Osaka</li>
+                    <li class="font-xs text-info d-block">Japan</li>
+                  </ul>
+                </a>
+                <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
+                  <span class="material-icons mr-2">star</span>
+                  <ul>
+                    <li>Roma</li>
+                    <li class="font-xs text-info d-block">Italy</li>
+                  </ul>
+                </a>
+                <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
+                  <span class="material-icons mr-2">star</span>
+                  <ul>
+                    <li>Paris</li>
+                    <li class="font-xs text-info d-block">London</li>
+                  </ul>
+                </a>
+                <a class="dropdown-item d-flex hover__bg--secondary js-search-bar-destination" href="#">
+                  <span class="material-icons mr-2">star</span>
+                  <ul>
+                    <li>Reykjavík</li>
+                    <li class="font-xs text-info d-block">Iceland</li>
+                  </ul>
+                </a>
+              </div>
+            </div>
+            <!-- Location ends -->
+
+            <!-- Data range starts -->
+            <div class="search-bar__content mr-lg-6 mb-lg-0 mb-6 d-flex align-items-center w-100">
+              <label for="date" class="mr-6">          
+                <span class="material-icons">date_range</span>
+              </label>
+              <div>
+                <span class="search-bar__content__title">Check-in / out</span>
+                <input class="border-0 w-100 text-info p-0" type="text" placeholder="Check-in / Check-out" id="js-search-bar-init-date" name="datefilter" value="">
+              </div>
+            </div>
+
+            <!-- Data range ends -->
+
+            <!-- Guest starts -->
+            <div class="dropdown mr-lg-6 mb-lg-0 mb-6 w-100" id="js-dropdown-guests">
+
+              <a href="#" class="d-block" id="guests" data-toggle="dropdown">
+                <div class="search-bar__content d-flex align-items-center">
+                  <span class="material-icons mr-6">person</span>
+                  <div>
+                    <span class="search-bar__content__title">Guests</span>
+                    <div class="js-guests-input text-info w-100">Guests</div>  
+                  </div>
+                </div>  
+              </a>
+
+              <div class="dropdown-menu w-100 mt-2 border-0 shadow" aria-labelledby="guests">
+                <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                    <div>Adult</div>
+                    <div>
+                      <a href="#">
+                        <span class="material-icons mr-6">remove</span>
+                      </a>
+                      <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-adult-count">0</span>
+                      <a href="#">
+                        <span class="material-icons">add</span>
+                      </a>
+                    </div>
+                </div>
+                <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                  <div>Child</div>
+                  <div>
+                    <a href="#">
+                      <span class="material-icons mr-6">remove</span>
+                    </a>
+                    <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-child-count">0</span>
+                    <a href="#">
+                      <span class="material-icons">add</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
+                  <div>Room</div>
+                  <div>
+                    <a href="#">
+                      <span class="material-icons mr-6">remove</span>
+                    </a>
+                    <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-room-count">0</span>
+                    <a href="#">
+                      <span class="material-icons">add</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Guest ends -->
           <!-- Input ends -->
           <input type="submit" class="btn btn-primary py-6 px-13 font-weight-bold w-lg-auto w-100" value="SEARCH">
         </form>
