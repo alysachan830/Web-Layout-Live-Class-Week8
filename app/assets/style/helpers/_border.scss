@@ -6,6 +6,11 @@
     border-radius: $custom-border-radius-lg !important;
 }
 
+.custom-rounded-top-lg {
+    border-top-right-radius: $custom-border-radius-lg !important;
+    border-top-left-radius: $custom-border-radius-lg !important;
+}
+
 .rounded-lg-md-left {
     @include media-breakpoint-up(md) {
         border-top-left-radius: $custom-border-radius-lg !important;

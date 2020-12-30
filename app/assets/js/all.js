@@ -221,12 +221,14 @@ $(document).ready(function() {
 
   // Open filter in mobile version
 
-  // $('.js-filter-btn').on( 'click', function() {
-  //   $('.js-filter').slideToggle();
-  // })
+  $('.js-filter-btn').on( 'click', function(){
+    $('.js-filter').slideDown();
+    $('.js-filter__result').slideDown();
+  })
 
-  $('.js-filter-btn').click(function(){
-    $('.js-filter').slideToggle();
+  $('.js-filter__btn--close').on( 'click', function(){
+    $('.js-filter').slideUp();
+    $('.js-filter__result').slideUp();
   })
 });
 
