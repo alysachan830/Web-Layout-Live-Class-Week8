@@ -190,7 +190,10 @@ $(document).ready(function() {
 
   var slider = document.getElementById('slider');
 
-  // console.log(slider)
+  // If no noUiSlider is used in the page, stop running the code below
+  if (!slider) {
+    return ;
+  } 
 
   noUiSlider.create(slider, {
       start: [800, 4000],
