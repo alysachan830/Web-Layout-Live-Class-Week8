@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
-  // .swiper-banner 
+  /////////////// index.html starts ///////////////
+
+  // .js-swiper-banner 
   // Initialize Swiper
-  var swiperBanner = new Swiper('.swiper-banner', {
+  var swiperBanner = new Swiper('.js-swiper-banner', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -31,7 +33,7 @@ $(document).ready(function() {
 
   // Check-in / out 
 
-  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
 
     // Show Check-in / out title
     $(this).siblings('.search-bar__content__title').show();
@@ -78,10 +80,10 @@ $(document).ready(function() {
   })
 
 
-  // .swiper-top-choices 
+  // .js-swiper-top-choices 
   // Initialize Swiper
 
-  var swiperTopChoices = new Swiper('.swiper-top-choices', {
+  var swiperTopChoices = new Swiper('.js-swiper-top-choices', {
     observer: true,
     observeParents: true,
     slidesPerView: 1.5,
@@ -139,10 +141,10 @@ $(document).ready(function() {
     }
   })
 
-  // .swiper-get-inspiration 
+  // .js-swiper-get-inspiration 
   // Initialize Swiper
 
-  var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
+  var swiperGetInspiration = new Swiper('.js-swiper-get-inspiration', {
     slidesPerView: 1.5,
     spaceBetween: 30,
     loop: true,
@@ -157,7 +159,11 @@ $(document).ready(function() {
     }
   });
 
-  /////////////// hotel-list starts ///////////////
+  
+  /////////////// index.html ends ///////////////
+
+
+  /////////////// hotel-list.html starts ///////////////
 
   var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
     slidesPerView: 1,
@@ -221,4 +227,4 @@ $(document).ready(function() {
   })
 });
 
-/////////////// hotel-list ends ///////////////
+/////////////// hotel-list.html ends ///////////////

@@ -14,7 +14,7 @@ current: index
 <div class="banner banner-h position-relative">
   <!-- Swiper starts -->
   <!-- Slider main container -->
-      <div class="swiper-container swiper-banner">
+      <div class="swiper-container swiper-banner js-swiper-banner">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -128,7 +128,7 @@ current: index
               </label>
               <div>
                 <span class="search-bar__content__title">Check-in / out</span>
-                <input class="border-0 w-100 text-info p-0" type="text" placeholder="Check-in / Check-out" id="js-search-bar-init-date" name="datefilter" value="">
+                <input class="js-search-bar-init-date border-0 w-100 text-info p-0" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="" autocomplete="off">
               </div>
             </div>
 
@@ -228,7 +228,7 @@ current: index
     <div class="tab-pane fade show active" id="top-choices-bali" role="tabpanel" aria-labelledby="top-choices-bali-tab">
       
       <!-- Swiper -->
-      <div class="swiper-container swiper-top-choices">
+      <div class="swiper-container js-swiper-top-choices">
         <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a class="card" href="#">
@@ -325,7 +325,7 @@ current: index
     <!-- Okinawa tab starts -->
     <div class="tab-pane fade" id="top-choices-okinawa" role="tabpanel" aria-labelledby="top-choices-okinawa-tab">
       <!-- Swiper -->
-      <div class="swiper-container swiper-top-choices">
+      <div class="swiper-container js-swiper-top-choices">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a class="card" href="#">
@@ -422,7 +422,7 @@ current: index
     <!-- Taipei tab starts -->
     <div class="tab-pane fade" id="top-choices-taipei" role="tabpanel" aria-labelledby="top-choices-taipei-tab">
         <!-- Swiper -->
-        <div class="swiper-container swiper-top-choices">
+        <div class="swiper-container js-swiper-top-choices">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -720,7 +720,7 @@ current: index
   </div>
 
   <!-- Swiper -->
-  <div class="swiper-container swiper-get-inspiration mb-lg-19 mb-16">
+  <div class="swiper-container js-swiper-get-inspiration mb-lg-19 mb-16">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <a class="card" href="#">
@@ -741,6 +741,7 @@ current: index
           </div>
         </a>
       </div>
+      
       <div class="swiper-slide">
         <a class="card" href="#">
           <img src="./assets/images/NewZealand.jpg" class="get-inspiration-img card-img-top mb-md-10 mb-8" alt="tourist attractions">
