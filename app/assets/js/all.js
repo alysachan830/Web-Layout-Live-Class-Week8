@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   // Check-in / out 
 
-  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
 
     // Show Check-in / out title
     $(this).siblings('.search-bar__content__title').show();
