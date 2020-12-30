@@ -261,7 +261,7 @@ current: index
         <!-- Filter ends -->
         <!-- Hotel list starts -->
         <div class="col-md-8">
-            <ul>
+            <ul class="mb-md-10 mb-16">
                 <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
                     <a class="card hover__bg--shadow" href="#">
                         <div class="row no-gutters">
@@ -574,7 +574,7 @@ current: index
                     </a>
                 </li>
 
-                <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
+                <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 js-hotel-list-card">
                     <a class="card hover__bg--shadow" href="#">
                         <div class="row no-gutters">
                           <div class="col-4">
@@ -654,6 +654,34 @@ current: index
 
 
             </ul>
+            <!-- Pagination starts -->
+            <nav class="custom-pagination">
+                <ul class="custom-pagination__wrap bg-secondary custom-rounded-lg">
+                    <li class="custom-pagination__btn btn btn-outline-primary">
+                        <a class="custom-pagination__arrow" href="#">
+                            <span class="d-lg-block d-none">PREVIOUS</span>
+                            <span class="d-lg-none material-icons">keyboard_arrow_left</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="custom-pagination__link active" href="#">1</a>
+                        <a class="custom-pagination__link" href="#">2</a>
+                        <a class="custom-pagination__link d-md-inline d-none" href="#">3</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">4</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">5</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">6</a>
+                        <a class="custom-pagination__link" href="#">...</a>
+                        <a class="custom-pagination__link" href="#">9</a>
+                    </li>
+                    <li class="custom-pagination__btn btn btn-primary">
+                        <a class="custom-pagination__arrow" href="#">
+                            <span class="d-lg-block d-none">NEXT</span>
+                            <span class="d-lg-none material-icons">keyboard_arrow_right</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Pagination ends -->
         </div>
         <!-- Hotel list ends -->
     </div>
