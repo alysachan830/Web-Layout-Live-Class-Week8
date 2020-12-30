@@ -1,5 +1,7 @@
 .hover {
+    
     &__bg--secondary {
+        transition: background 0.3s;
         &:hover {
             background: $secondary !important;
         }
@@ -12,6 +14,7 @@
     }
     
     &__bg--shadow {
+        transition: box-shadow 0.3s;
         &:hover {
             box-shadow: $box-shadow !important;
         }

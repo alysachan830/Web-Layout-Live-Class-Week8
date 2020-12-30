@@ -180,9 +180,9 @@ $(document).ready(function() {
 
   $('.js-hotel-list-card').hover(
     function() {
-      $(this).find('.hotel-list-card-arrow').css('display','flex');
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','100');
     }, function() {
-      $(this).find('.hotel-list-card-arrow').css('display','none');
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','0');
     }
   )
 
@@ -229,6 +229,13 @@ $(document).ready(function() {
   $('.js-filter__btn--close').on( 'click', function(){
     $('.js-filter').slideUp();
     $('.js-filter__result').slideUp();
+  })
+
+  // Open sort in mobile version
+
+  $('.js-sort-btn').on( 'click', function(){
+    $('.js-sort').slideToggle();
+    $('.js-sort-btn').toggleClass('sort-btn-active');
   })
 });
 
