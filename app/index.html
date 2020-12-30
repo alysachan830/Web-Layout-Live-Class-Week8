@@ -61,7 +61,7 @@ current: index
   <!-- Swiper ends -->
   
   <!-- Search bar starts -->
-  <div class="search-bar-init container position-absolute">
+  <div class="search-bar-init js-search-bar-init container position-absolute">
     <div class="row justify-content-center">
       <div class="col-10">
         <!-- Form starts -->
@@ -71,10 +71,13 @@ current: index
             <!-- Location starts -->
             <div class="dropdown mr-lg-6 mb-lg-0 mb-6 w-100" id="js-dropdown-destinations">
               
-              <a href="#" class="js-destinations-input d-block" id="guests" data-toggle="dropdown">
+              <a href="#" class="d-block" id="guests" data-toggle="dropdown">
                 <div class="search-bar__content d-flex align-items-center">
                   <span class="material-icons mr-6">location_on</span>
-                  <span class="text-info w-100">Destination</span>  
+                  <div>
+                    <span class="search-bar__content__title">Destination</span>
+                    <div class="js-destinations-input text-info w-100">Destination</div>  
+                  </div>
                 </div>  
               </a>
 
@@ -123,17 +126,24 @@ current: index
               <label for="date" class="mr-6">          
                 <span class="material-icons">date_range</span>
               </label>
-              <input class="border-0 w-100" type="text" placeholder="Check-in / Check-out" id="date" name="datefilter" value="">
+              <div>
+                <span class="search-bar__content__title">Check-in / out</span>
+                <input class="border-0 w-100 text-info p-0" type="text" placeholder="Check-in / Check-out" id="js-search-bar-init-date" name="datefilter" value="">
+              </div>
             </div>
+
             <!-- Data range ends -->
 
             <!-- Guest starts -->
             <div class="dropdown mr-lg-6 mb-lg-0 mb-6 w-100" id="js-dropdown-guests">
 
-              <a href="#" class="js-guests-input d-block" id="guests" data-toggle="dropdown">
+              <a href="#" class="d-block" id="guests" data-toggle="dropdown">
                 <div class="search-bar__content d-flex align-items-center">
                   <span class="material-icons mr-6">person</span>
-                  <span class="text-info w-100">Guests</span>  
+                  <div>
+                    <span class="search-bar__content__title">Guests</span>
+                    <div class="js-guests-input text-info w-100">Guests</div>  
+                  </div>
                 </div>  
               </a>
 

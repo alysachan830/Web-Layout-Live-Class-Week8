@@ -1,6 +1,4 @@
-$(document).ready( function() {
-
-  ////////// Index.html JS starts //////////
+$(document).ready(function() {
 
   // .swiper-banner 
   // Initialize Swiper
@@ -20,19 +18,28 @@ $(document).ready( function() {
     e.preventDefault();
     const destination = $(this).find('li:first-of-type').text();
 
-    const destinationStr = `
-    <div class="search-bar__content d-flex align-items-center">
-      <span class="material-icons mr-6">location_on</span>
-      <div>
-        <span class="search-bar__content__title">destination</span>
-        <span class="search-bar__content__subtitle">${destination}</span>
-      </div>
-    </div> 
-    `
-
+    const searchBarDestination = `
+    <span class="search-bar__content__subtitle">${destination}</span>
+`
     // Show selected destinations
-    $('.js-destinations-input').html(destinationStr);
+
+    $('.js-destinations-input').html(searchBarDestination);
+
+    // Show title
+    $(this).parent().siblings().find('.search-bar__content__title').show();
   });
+
+  // Check-in / out 
+
+  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+
+    // Show Check-in / out title
+    $(this).siblings('.search-bar__content__title').show();
+
+    // Adjust font-size
+    $(this).css('font-size','14px');
+  });
+
 
   // Guest count
 
@@ -60,18 +67,14 @@ $(document).ready( function() {
     const childCount = parseInt($('.js-search-bar-guests-child-count').text());
     const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
 
-    const guestsStr = `
-    <div class="search-bar__content d-flex align-items-center">
-      <span class="material-icons mr-6">person</span>
-      <div>
-        <span class="search-bar__content__title">guest</span>
-        <span class="search-bar__content__subtitle">${adultCount} adult・${childCount} child・${roomCount} room</span>
-      </div>
-    </div> 
-    `
+    const searchBarGuests = `
+    <span class="search-bar__content__subtitle font-xs">${adultCount} adult・${childCount} child・${roomCount} room</span>
+  `
+    // Show guests count number
+    $('.js-guests-input').html(searchBarGuests);
 
-    $('.js-guests-input').html(guestsStr);
-
+    // Show guests title
+    $(this).find('.search-bar__content__title').show();
   })
 
 
@@ -112,7 +115,8 @@ $(document).ready( function() {
     });
   
     $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('DD MMM') + ' - ' + picker.endDate.format('DD MMM'));
+        // $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
     });
   
     $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
@@ -153,6 +157,68 @@ $(document).ready( function() {
     }
   });
 
-  ////////// Index.html JS ends //////////
+  /////////////// hotel-list starts ///////////////
 
+  var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next', 
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Swiper
+  // Show swiper buttons when hover
+
+  $('.js-hotel-list-card').hover(
+    function() {
+      $(this).find('.hotel-list-card-arrow').css('display','flex');
+    }, function() {
+      $(this).find('.hotel-list-card-arrow').css('display','none');
+    }
+  )
+
+  // noUiSlider
+
+  var slider = document.getElementById('slider');
+
+  // console.log(slider)
+
+  noUiSlider.create(slider, {
+      start: [800, 4000],
+      connect: true,
+      range: {
+          'min': 800,
+          'max': 4000
+      },
+      
+  });
+
+  function showBudget() {
+    const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+    const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+    $('.js-budget-min').text(budgetMin);
+    $('.js-budget-max').text(budgetMax);  
+  }
+
+  showBudget();
+
+
+  slider.noUiSlider.on('slide', function(){
+      showBudget();
+  })
+
+  // Open filter in mobile version
+
+  // $('.js-filter-btn').on( 'click', function() {
+  //   $('.js-filter').slideToggle();
+  // })
+
+  $('.js-filter-btn').click(function(){
+    $('.js-filter').slideToggle();
+  })
 });
+
+/////////////// hotel-list ends ///////////////
