@@ -81,3 +81,19 @@
     }
 }
 
+
+.swiper-container__arrow--sm {
+    background: $secondary;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; 
+    
+    .material-icons {
+        font-size: 14px;
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,8 +1,10 @@
-$(document).ready( function() {
+$(document).ready(function() {
 
-  // .swiper-banner 
+  /////////////// index.html starts ///////////////
+
+  // .js-swiper-banner 
   // Initialize Swiper
-  var swiperBanner = new Swiper('.swiper-banner', {
+  var swiperBanner = new Swiper('.js-swiper-banner', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -31,7 +33,7 @@ $(document).ready( function() {
 
   // Check-in / out 
 
-  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
 
     // Show Check-in / out title
     $(this).siblings('.search-bar__content__title').show();
@@ -67,11 +69,6 @@ $(document).ready( function() {
     const childCount = parseInt($('.js-search-bar-guests-child-count').text());
     const roomCount = parseInt($('.js-search-bar-guests-room-count').text());
 
-    // const searchBarInitGuests = `
-    //   <span class="search-bar__content__title">guest</span>
-    //   <span class="search-bar__content__subtitle font-xs text-nowrap">${adultCount} adult・${childCount} child・${roomCount} room</span>
-    // `
-
     const searchBarGuests = `
     <span class="search-bar__content__subtitle font-xs">${adultCount} adult・${childCount} child・${roomCount} room</span>
   `
@@ -82,12 +79,11 @@ $(document).ready( function() {
     $(this).find('.search-bar__content__title').show();
   })
 
-  // <span class="search-bar__content__title">Check-in / out</span>
 
-  // .swiper-top-choices 
+  // .js-swiper-top-choices 
   // Initialize Swiper
 
-  var swiperTopChoices = new Swiper('.swiper-top-choices', {
+  var swiperTopChoices = new Swiper('.js-swiper-top-choices', {
     observer: true,
     observeParents: true,
     slidesPerView: 1.5,
@@ -145,10 +141,10 @@ $(document).ready( function() {
     }
   })
 
-  // .swiper-get-inspiration 
+  // .js-swiper-get-inspiration 
   // Initialize Swiper
 
-  var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
+  var swiperGetInspiration = new Swiper('.js-swiper-get-inspiration', {
     slidesPerView: 1.5,
     spaceBetween: 30,
     loop: true,
@@ -163,4 +159,84 @@ $(document).ready( function() {
     }
   });
 
+  
+  /////////////// index.html ends ///////////////
+
+
+  /////////////// hotel-list.html starts ///////////////
+
+  var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next', 
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Swiper
+  // Show swiper buttons when hover
+
+  $('.js-hotel-list-card').hover(
+    function() {
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','100');
+    }, function() {
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','0');
+    }
+  )
+
+  // noUiSlider
+
+  var slider = document.getElementById('slider');
+
+  // If no noUiSlider is used in the page, stop running the code below
+  if (!slider) {
+    return ;
+  } 
+
+  noUiSlider.create(slider, {
+      start: [800, 4000],
+      connect: true,
+      range: {
+          'min': 800,
+          'max': 4000
+      },
+      
+  });
+
+  function showBudget() {
+    const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+    const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+    $('.js-budget-min').text(budgetMin);
+    $('.js-budget-max').text(budgetMax);  
+  }
+
+  showBudget();
+
+
+  slider.noUiSlider.on('slide', function(){
+      showBudget();
+  })
+
+  // Open filter in mobile version
+
+  $('.js-filter-btn').on( 'click', function(){
+    $('.js-filter').slideDown();
+    $('.js-filter__result').slideDown();
+  })
+
+  $('.js-filter__btn--close').on( 'click', function(){
+    $('.js-filter').slideUp();
+    $('.js-filter__result').slideUp();
+  })
+
+  // Open sort in mobile version
+
+  $('.js-sort-btn').on( 'click', function(){
+    $('.js-sort').slideToggle();
+    $('.js-sort-btn').toggleClass('sort-btn-active');
+  })
 });
+
+/////////////// hotel-list.html ends ///////////////

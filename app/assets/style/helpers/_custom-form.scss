@@ -1,0 +1,12 @@
+.custom-control-label::after {
+    border-radius: 0.125rem;
+    border: 2px solid #000;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    border: none;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-radius: 0.125rem;
+}
