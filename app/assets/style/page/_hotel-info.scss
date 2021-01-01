@@ -64,13 +64,9 @@
     }
 }
 
-
-.room-type-info-title {
-    @include media-breakpoint-up(md) {
-        margin-right: 72px;
-    }
-
-    @include media-breakpoint-up(lg) {
-        margin-right: 137px;
-    }
+.hotel-info-modal {
+    background: rgba(0,0,0,0.8);
+    bottom: 0;
+    display: none;
+    z-index: 1070;
 }

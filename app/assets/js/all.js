@@ -316,6 +316,71 @@ $(document).ready(function() {
     }
   })
 
+  // Add / remove rooms 
+
+  // Count total rooms
+  let totalRoomCount = 0;
+
+  // Add rooms  
+  $('.js-room-type-count-remove').on( 'click', function(e){
+    e.preventDefault();
+    // console.log($(this).parents('.js-room-type'));
+
+    let roomCount = parseInt($(this).siblings('.js-room-type-count-result').text());
+
+    // Open custom modal
+    $('.js-hotel-info-modal').slideDown();
+
+    if (roomCount === 0) {
+      return;
+    } 
+
+    roomCount -= 1;
+
+    // Show count result 
+    $(this).siblings('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type').siblings('.js-room-type-bar').find('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type-bar').siblings('.js-room-type').find('.js-room-type-count-result').text(roomCount);
+
+    // Update total room count
+    totalRoomCount -= 1;
+    updateHotelInfoModal();
+
+  });
+
+  // Remove rooms
+  $('.js-room-type-count-add').on( 'click', function(e){
+    e.preventDefault();
+
+    let roomCount = parseInt($(this).siblings('.js-room-type-count-result').text());
+
+    roomCount += 1;
+
+    // Show count result
+    $(this).siblings('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type').siblings('.js-room-type-bar').find('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type-bar').siblings('.js-room-type').find('.js-room-type-count-result').text(roomCount);
+
+    // Open custom modal
+    $('.js-hotel-info-modal').slideDown();
+
+    // Update total room count
+    totalRoomCount += 1;
+    updateHotelInfoModal();
+  });
+
+  // Update count 
+  function updateHotelInfoModal(){
+    $('.js-hotel-info-modal-count').text(totalRoomCount);
+  };
+  
+
+  // Close custom modal
+  $('.js-hotel-info-modal__btn--close').on( 'click', function(e){
+    e.preventDefault();
+    $('.js-hotel-info-modal').slideUp();
+  })
+
   /////////////// hotel-info.html ends ///////////////
 
 });

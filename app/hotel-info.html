@@ -94,6 +94,7 @@ current: index
         </div>
     </div>
     <!-- Hotel text info ends -->
+
     <!-- Hotel room info starts -->
     <h3 class="font-l mb-md-10 mb-6">Select your room</h3>
     <div class="d-md-block d-none mb-lg-16 mb-md-15">
@@ -109,7 +110,6 @@ current: index
         </div>
     </div>
 
-    <!-- <div class="d-none d-md-flex justify-content-between border-bottom pb-2 mb-10"> -->
     <div class="d-none d-md-block border-bottom pb-2 mb-10">
         <div class="row no-gutters">
             <div class="col-3">
@@ -140,8 +140,9 @@ current: index
     </div>
 
 
+    <!-- card starts -->
     <div class="card pb-lg-10 pb-md-6 mb-md-8 mb-2 border-md-bottom rounded-0">
-        <div class="row no-gutters border-md-0 border border-bottom-0 rounded-top">
+        <div class="js-room-type row no-gutters border-md-0 border border-bottom-0 rounded-top">
             <!-- card image starts -->
             <div class="col-md-3 col-6">
             <div class="card-img bg-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/roomA.jpg');"></div>
@@ -197,12 +198,12 @@ current: index
                                     <p class="text-info font-xs">per night</p>
                                 </div>
                                 <div class="col-4 text-center d-md-block d-none">
-                                    <a class="mr-lg-10 mr-md-4" href="#">
-                                        <span class="material-icons font-m">add</span>
-                                    </a>
-                                    <span class="text-info mr-lg-10 mr-md-4">0</span>
-                                    <a href="#">
+                                    <a class="js-room-type-count-remove mr-lg-10 mr-md-4" href="#">
                                         <span class="material-icons font-m">remove</span>
+                                    </a>
+                                    <span class="js-room-type-count-result text-info mr-lg-10 mr-md-4">0</span>
+                                    <a class="js-room-type-count-add" href="#">
+                                        <span class="material-icons font-m">add</span>
                                     </a>
                                 </div>
                             </div>
@@ -214,16 +215,16 @@ current: index
             <!-- card content ends -->
         </div>
 
-        <div class="d-md-none bg-secondary p-2 rounded-bottom">
+        <div class="js-room-type-bar d-md-none bg-secondary p-2 rounded-bottom">
             <div class="row align-items-center">
                 <div class="col-6">
                     <div class="d-flex justify-content-between">
-                        <a href="#">
-                            <span class="material-icons font-m">add</span>
-                        </a>
-                        <span class="text-info">0</span>
-                        <a href="#">
+                        <a class="js-room-type-count-remove" href="#">
                             <span class="material-icons font-m">remove</span>
+                        </a>
+                        <span class="js-room-type-count-result text-info">0</span>
+                        <a class="js-room-type-count-add" href="#">
+                            <span class="material-icons font-m">add</span>
                         </a>
                     </div>
                 </div>
@@ -236,9 +237,228 @@ current: index
             </div>
         </div>
     </div>
-    
+    <!-- card ends -->
 
-    <!-- Hotel room card ends -->
-    <!-- Hotel room info ends -->
+    <!-- card starts -->
+    <div class="card pb-lg-10 pb-md-6 mb-md-8 mb-2 border-md-bottom rounded-0">
+        <div class="js-room-type row no-gutters border-md-0 border border-bottom-0 rounded-top">
+            <!-- card image starts -->
+            <div class="col-md-3 col-6">
+            <div class="card-img bg-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/roomA.jpg');"></div>
+            </div>
+            <!-- card image ends -->
+            <!-- card content starts -->
+            <div class="col-md-9 col-6">
+                <div class="card-body py-2 px-6">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-4">
+                            <p class="card-title font-weight-bold">Deluxe Double Room A</p>
+                            <p class="font-xs text-info mb-md-8 mb-2">1 bed (Queen size)</p>
+                            <div class="d-flex">
+                                <ul class="d-lg-block d-flex mr-lg-10 mr-md-0">
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">wifi</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Wi-Fi</span>
+                                    </li>
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">restaurant</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Breakfast</span>
+                                    </li>
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">personal_video</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Television</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-icons text-info font-m mr-1">ac_unit</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Air Conditioner</span>
+                                    </li>
+                                </ul>
+                                <ul class="d-lg-block d-flex">
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">room_service</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Room service</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-icons text-info font-m mr-1">smoke_free</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Smoke free</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-4 text-center">
+                                    <span class="material-icons font-m">person</span>
+                                    <span class="material-icons font-m">person</span>
+                                </div>
+                                <div class="col-4 text-center d-md-block d-none">
+                                    <del class="font-s text-info">TWD 1,600</del>
+                                    <p class="font-weight-bold">TWD <span class="text-primary">1,490</span></p>
+                                    <p class="text-info font-xs">per night</p>
+                                </div>
+                                <div class="col-4 text-center d-md-block d-none">
+                                    <a class="js-room-type-count-remove mr-lg-10 mr-md-4" href="#">
+                                        <span class="material-icons font-m">remove</span>
+                                    </a>
+                                    <span class="js-room-type-count-result text-info mr-lg-10 mr-md-4">0</span>
+                                    <a class="js-room-type-count-add" href="#">
+                                        <span class="material-icons font-m">add</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- card content ends -->
+        </div>
+
+        <div class="js-room-type-bar d-md-none bg-secondary p-2 rounded-bottom">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="d-flex justify-content-between">
+                        <a class="js-room-type-count-remove" href="#">
+                            <span class="material-icons font-m">remove</span>
+                        </a>
+                        <span class="js-room-type-count-result text-info">0</span>
+                        <a class="js-room-type-count-add" href="#">
+                            <span class="material-icons font-m">add</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <del class="font-s text-info">TWD 1,600</del>
+                        <div class="font-weight-bold">TWD <span class="text-primary">1,490</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card ends -->
+
+    <!-- card starts -->
+    <div class="card mb-lg-19 mb-15 rounded-0">
+        <div class="js-room-type row no-gutters border-md-0 border border-bottom-0 rounded-top">
+            <!-- card image starts -->
+            <div class="col-md-3 col-6">
+            <div class="card-img bg-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/roomA.jpg');"></div>
+            </div>
+            <!-- card image ends -->
+            <!-- card content starts -->
+            <div class="col-md-9 col-6">
+                <div class="card-body py-2 px-6">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-4">
+                            <p class="card-title font-weight-bold">Deluxe Double Room A</p>
+                            <p class="font-xs text-info mb-md-8 mb-2">1 bed (Queen size)</p>
+                            <div class="d-flex">
+                                <ul class="d-lg-block d-flex mr-lg-10 mr-md-0">
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">wifi</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Wi-Fi</span>
+                                    </li>
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">restaurant</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Breakfast</span>
+                                    </li>
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">personal_video</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Television</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-icons text-info font-m mr-1">ac_unit</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Air Conditioner</span>
+                                    </li>
+                                </ul>
+                                <ul class="d-lg-block d-flex">
+                                    <li class="mb-1">
+                                        <span class="material-icons text-info font-m mr-1">room_service</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Room service</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-icons text-info font-m mr-1">smoke_free</span>
+                                        <span class="text-info font-s d-lg-inline d-none">Smoke free</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-4 text-center">
+                                    <span class="material-icons font-m">person</span>
+                                    <span class="material-icons font-m">person</span>
+                                </div>
+                                <div class="col-4 text-center d-md-block d-none">
+                                    <del class="font-s text-info">TWD 1,600</del>
+                                    <p class="font-weight-bold">TWD <span class="text-primary">1,490</span></p>
+                                    <p class="text-info font-xs">per night</p>
+                                </div>
+                                <div class="col-4 text-center d-md-block d-none">
+                                    <a class="js-room-type-count-remove mr-lg-10 mr-md-4" href="#">
+                                        <span class="material-icons font-m">remove</span>
+                                    </a>
+                                    <span class="js-room-type-count-result text-info mr-lg-10 mr-md-4">0</span>
+                                    <a class="js-room-type-count-add" href="#">
+                                        <span class="material-icons font-m">add</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- card content ends -->
+        </div>
+
+        <div class="js-room-type-bar d-md-none bg-secondary p-2 rounded-bottom">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="d-flex justify-content-between">
+                        <a class="js-room-type-count-remove" href="#">
+                            <span class="material-icons font-m">remove</span>
+                        </a>
+                        <span class="js-room-type-count-result text-info">0</span>
+                        <a class="js-room-type-count-add" href="#">
+                            <span class="material-icons font-m">add</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <del class="font-s text-info">TWD 1,600</del>
+                        <div class="font-weight-bold">TWD <span class="text-primary">1,490</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card ends -->
+
 
 </div>
+
+<!-- Custom modal starts -->
+
+<div class="hotel-info-modal js-hotel-info-modal rounded-top py-10 position-fixed w-100">
+    <div class="container">
+        <div class="d-md-flex justify-content-md-between align-items-md-center text-md-left text-right">
+            <div class="mb-md-0 mb-10">
+                <p class="text-info-light font-xs mb-1">
+                    <span class="js-hotel-info-modal-count">1</span> room(s)
+                </p>
+                <h3 class="font-weight-bold text-white font-l">TWD 3,960</h3>
+            </div>
+            <div class="d-flex">
+                <a class="js-hotel-info-modal__btn--close btn btn-outline-white font-weight-bold text-uppercase mr-2 py-8 px-md-13 w-50" href="#">Cancel</a>
+                <a class="btn btn-primary font-weight-bold text-uppercase py-8 px-md-13 w-50" href="./reservation-form.html">Reserve</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom modal ends -->   
+
+
+<!-- Hotel room info ends -->
