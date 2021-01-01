@@ -11,7 +11,7 @@
     border-top-left-radius: $custom-border-radius-lg !important;
 }
 
-.rounded-lg-md-left {
+.rounded-md-left-lg {
     @include media-breakpoint-up(md) {
         border-top-left-radius: $custom-border-radius-lg !important;
         border-bottom-left-radius: $custom-border-radius-lg !important;    

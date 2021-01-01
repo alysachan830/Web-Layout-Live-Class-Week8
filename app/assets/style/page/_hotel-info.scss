@@ -61,3 +61,14 @@
         }
     }
 }
+
+
+.room-type-info-title {
+    @include media-breakpoint-up(md) {
+        margin-right: 72px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 137px;
+    }
+}
