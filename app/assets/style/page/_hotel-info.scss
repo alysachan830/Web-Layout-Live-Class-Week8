@@ -32,11 +32,13 @@
     }
 
     &__bg {
-        background: rgba(0,0,0,0.8);
-        position: fixed;
-        z-index: 1080;
-        top: 0;
-        left: 0;
+        @include media-breakpoint-up(md) {
+            background: rgba(0,0,0,0.8);
+            position: fixed;
+            z-index: 1080;
+            top: 0;
+            left: 0;
+        }
     }
 
     &__btn--close {
