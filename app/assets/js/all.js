@@ -279,7 +279,7 @@ $(document).ready(function() {
 
   // .js-swiper-banner 
   // Initialize Swiper
-  var swiperHotelInfo = new Swiper('.js-swiper-hotel-info--lg', {
+  var swiperHotelInfo = new Swiper('.js-swiper-hotel-info', {
     observer: true,
     observeParents: true,
     slidesPerView: 1,
@@ -290,18 +290,31 @@ $(document).ready(function() {
     },
   });
 
-//////OK
+  // Toggle fullscreen swiper when clicking button 
+
   $('.js-hotel-info-img-link').on( 'click', function(){
-    $('.js-swiper-hotel-info--lg').fadeIn();
+    $('.js-swiper-hotel-info').fadeIn();
   });
-
-  ///////OK
-
 
   $('.js-swiper-hotel-info__btn--close').on( 'click', function(){
-    $('.js-swiper-hotel-info--lg').fadeOut();
+    $('.js-swiper-hotel-info').fadeOut();
   });
 
+
+  // Remove all jQuery inline style when resizing to mobile 
+
+  let windowWidth = $(window).width()
+  $(window).resize(function() {
+    windowWidth = $(window).width();
+
+    if (windowWidth <= 767) {
+      $('.js-swiper-hotel-info').removeAttr('style');
+      $('.js-swiper-hotel-info').removeClass('swiper-hotel-info__bg');
+    
+    } else {
+      $('.js-swiper-hotel-info').addClass('swiper-hotel-info__bg');
+    }
+  })
 
   /////////////// hotel-info.html ends ///////////////
 

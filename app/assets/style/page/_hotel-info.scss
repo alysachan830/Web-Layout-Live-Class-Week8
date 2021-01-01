@@ -23,31 +23,85 @@
     }
 }
 
-.swiper-hotel-info__img{
-    height: 247px;
-}
-
-
-.swiper-hotel-info--lg {
+.swiper-hotel-info {
     display: block;
     // opacity: 100%;
 
     @include media-breakpoint-up(md) {
         display: none;
     }
+
+    &__bg {
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        z-index: 1080;
+        top: 0;
+        left: 0;
+    }
+
+    &__btn--close {
+        top: 20px;
+        right: 20px;
+        z-index: 1090;
+    }
+
+    &__swiper-slide {
+        padding: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 80px;
+        }
+    }
+
+    &__img {
+        height: 247px;
+
+        @include media-breakpoint-up(md) {
+            height: 100%;
+        }
+    }
 }
 
 
-.swiper-hotel-info__bg--lg {
-    background: rgba(0,0,0,0.8);
-    position: fixed;
-    z-index: 1080;
-    top: 0;
-    left: 0;
-}
+/////
 
-.swiper-hotel-info__btn--close {
-    top: 20px;
-    right: 20px;
-    z-index: 1090;
-}
+// .swiper-hotel-info__swiper-slide {
+//     padding: 0;
+
+//     @include media-breakpoint-up(md) {
+//         padding: 80px;
+//     }
+// }
+
+
+// .swiper-hotel-info {
+//     display: block;
+//     // opacity: 100%;
+
+//     @include media-breakpoint-up(md) {
+//         display: none;
+//     }
+// }
+
+
+// .swiper-hotel-info__bg {
+//     background: rgba(0,0,0,0.8);
+//     position: fixed;
+//     z-index: 1080;
+//     top: 0;
+//     left: 0;
+// }
+
+// .swiper-hotel-info__btn--close {
+//     top: 20px;
+//     right: 20px;
+//     z-index: 1090;
+// }
+
+// .swiper-hotel-info__img{
+//     height: 247px;
+
+//     @include media-breakpoint-up(md) {
+//         height: 100%;
+//     }
+// }
