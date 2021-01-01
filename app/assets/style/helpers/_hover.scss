@@ -19,4 +19,11 @@
             box-shadow: $box-shadow !important;
         }
     }
+
+    &__filter--darken {
+        transition: filter 0.3s;
+        &:hover {
+            filter : brightness(60%) !important;
+        }
+    }
 }
