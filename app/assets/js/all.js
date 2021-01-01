@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
+
   /////////////// index.html starts ///////////////
 
   // .js-swiper-banner 
   // Initialize Swiper
+  
   var swiperBanner = new Swiper('.js-swiper-banner', {
     loop: true,
     navigation: {
@@ -162,7 +164,6 @@ $(document).ready(function() {
   
   /////////////// index.html ends ///////////////
 
-
   /////////////// hotel-list.html starts ///////////////
 
   var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
@@ -186,38 +187,67 @@ $(document).ready(function() {
     }
   )
 
+
+
   // noUiSlider
 
   var slider = document.getElementById('slider');
 
   // If no noUiSlider is used in the page, stop running the code below
-  if (!slider) {
-    return ;
-  } 
+  // if (!slider) {
+  //   return ;
+  // }
 
-  noUiSlider.create(slider, {
+  if(slider) {
+    noUiSlider.create(slider, {
       start: [800, 4000],
       connect: true,
       range: {
           'min': 800,
           'max': 4000
       },
+    })
+
+    function showBudget() {
+      const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+      const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+      $('.js-budget-min').text(budgetMin);
+      $('.js-budget-max').text(budgetMax);  
+    }
+  
+    showBudget();
+  
+  
+    slider.noUiSlider.on('slide', function(){
+        showBudget();
+    })
+  } 
+
+  // noUiSlider.create(slider, {
+  //     start: [800, 4000],
+  //     connect: true,
+  //     range: {
+  //         'min': 800,
+  //         'max': 4000
+  //     },
       
-  });
+  // });
 
-  function showBudget() {
-    const budgetMin = parseInt(slider.noUiSlider.get()[0]);
-    const budgetMax = parseInt(slider.noUiSlider.get()[1]);
-    $('.js-budget-min').text(budgetMin);
-    $('.js-budget-max').text(budgetMax);  
-  }
+  // function showBudget() {
+  //   const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+  //   const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+  //   $('.js-budget-min').text(budgetMin);
+  //   $('.js-budget-max').text(budgetMax);  
+  // }
 
-  showBudget();
+  // showBudget();
 
 
-  slider.noUiSlider.on('slide', function(){
-      showBudget();
-  })
+  // slider.noUiSlider.on('slide', function(){
+  //     showBudget();
+  // })
+
+  
 
   // Open filter in mobile version
 
@@ -237,6 +267,42 @@ $(document).ready(function() {
     $('.js-sort').slideToggle();
     $('.js-sort-btn').toggleClass('sort-btn-active');
   })
-});
 
-/////////////// hotel-list.html ends ///////////////
+  
+
+  /////////////// hotel-list.html ends ///////////////
+  
+  
+  
+  
+  /////////////// hotel-info.html starts ///////////////
+
+  // .js-swiper-banner 
+  // Initialize Swiper
+  var swiperHotelInfo = new Swiper('.js-swiper-hotel-info--lg', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+//////OK
+  $('.js-hotel-info-img-link').on( 'click', function(){
+    $('.js-swiper-hotel-info--lg').fadeIn();
+  });
+
+  ///////OK
+
+
+  $('.js-swiper-hotel-info__btn--close').on( 'click', function(){
+    $('.js-swiper-hotel-info--lg').fadeOut();
+  });
+
+
+  /////////////// hotel-info.html ends ///////////////
+
+});

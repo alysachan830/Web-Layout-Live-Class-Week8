@@ -1,0 +1,53 @@
+.hotel-info__img--l {
+
+    height: 268px;
+
+    @include media-breakpoint-up(lg) {
+        height: 434px;
+    }
+}
+
+.hotel-info__img {
+    height: 132px;
+
+    @include media-breakpoint-up(lg) {
+        height: 213px;
+    }
+}
+
+.hotel-info__img--s {
+    height: 93px;
+
+    @include media-breakpoint-up(lg) {
+        height: 151px;
+    }
+}
+
+.swiper-hotel-info__img{
+    height: 247px;
+}
+
+
+.swiper-hotel-info--lg {
+    display: block;
+    // opacity: 100%;
+
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+
+.swiper-hotel-info__bg--lg {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 1080;
+    top: 0;
+    left: 0;
+}
+
+.swiper-hotel-info__btn--close {
+    top: 20px;
+    right: 20px;
+    z-index: 1090;
+}
