@@ -10,7 +10,7 @@ engine: ejs
 current: index
 ---
 
-<div class="container pt-10 pb-16">
+<div class="container pt-10 pb-lg-19 pb-16">
     <div class="row">
         <!-- Title starts -->
         <div class="col-md-4">
@@ -19,45 +19,65 @@ current: index
             </h2>
         </div>
         <!-- Title ends -->
-        <!-- Filter and sort bar starts -->
-        <div class="col-md-8 mb-2">
-            <ul class="sort mb-10">
-                <li class="mr-10">
-                    <a class="font-weight-bold text-primary" href="#">Recommended</a>
+        <div class="col-md-8 position-relative">
+            <!-- Sort starts -->
+            <ul class="sort js-sort mb-md-10 mb-0 d-md-flex">
+                <li class="mr-md-10">
+                    <a class="font-weight-bold text-primary px-md-0 pt-md-0 pb-md-0 px-8 pt-10 pb-6 d-block" href="#">Recommended</a>
                 </li>
-                <li class="mr-10">
-                    <a class="font-weight-bold" href="#">Lowest Price</a>
+                <li class="mr-md-10">
+                    <a class="font-weight-bold px-md-0 py-md-0 py-6 px-8 d-block" href="#">Lowest Price</a>
                 </li>
-                <li class="mr-10">
-                    <a class="font-weight-bold" href="#">Best value</a>
+                <li class="mr-md-10">
+                    <a class="font-weight-bold px-md-0 py-md-0 py-6 px-8 d-block" href="#">Best value</a>
                 </li>
                 <li>
-                    <a class="font-weight-bold" href="#">Distance to City Center</a>
+                    <a class="font-weight-bold px-md-0 pt-md-0 pb-md-0 px-8 pt-6 pb-10 d-block" href="#">Distance to City Center</a>
                 </li>
             </ul>
-            <ul class="d-md-none d-flex justify-content-around">
+            <!-- Sort ends -->
+            <!-- Filter and sort bar starts -->
+            <ul class="d-md-none d-flex justify-content-around mb-2">
                 <li class="w-50 border-right">
-                    <a class="js-filter-btn text-uppercase font-weight-bold py-6 text-center d-block" href="#">
+                    <a class="js-filter-btn text-uppercase font-weight-bold py-6 text-center d-block hover__bg--secondary" href="#">
                         <span class="material-icons">filter_list</span>
                         Filter
                     </a>
                 </li>
                 <li class="w-50">
-                    <a class="text-uppercase font-weight-bold py-6 text-center d-block" href="#">
+                    <a class="js-sort-btn text-uppercase font-weight-bold py-6 text-center d-block hover__bg--secondary" href="#">
                         <span class="material-icons">sort</span>
                         Sort
                     </a>
                 </li>
             </ul>
+            <!-- Filter and sort bar ends -->
         </div>
-        <!-- Filter and sort bar ends -->
     </div>
     <div class="row">
         <!-- Filter starts -->
         <div class="col-md-4">
-            <div class="filter js-filter bg-secondary p-10 custom-rounded-lg">
+            <div class="filter js-filter bg-secondary px-10 custom-rounded-lg d-md-block">
+                <!-- Filter bar starts -->
+                <div class="filter__bar position-fixed w-100 bg-white p-6 d-md-none">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <span class="material-icons mr-2">
+                                filter_list
+                                </span>
+                            <span class="font-weight-bold text-uppercase">Filter</span>
+                        </div>
+
+                        <a class="js-filter__btn--close" href="#">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Filter bar ends -->
                 <!-- Deal starts -->
-                <div class="border-bottom border-white pb-10 mb-10">
+                <div class="filter__deals border-bottom border-white mt-md-10 pb-10 mb-10 pt-md-0">
                     <p class="font-weight-bold mb-6">Deals</p>
                     <ul>
                         <li class="mb-2">
@@ -199,7 +219,7 @@ current: index
                 </div>
                 <!-- Rating ends -->
                 <!-- Stay type starts -->
-                <div>
+                <div class="filter__stay-type mb-md-10">
                     <p class="font-weight-bold mb-6">Stay type</p>
                     <ul>
                         <li class="mb-2">
@@ -229,12 +249,19 @@ current: index
                     </ul>
                 </div>
                 <!-- Stay type ends -->
+                <div class="filter__result js-filter__result position-fixed py-10 px-6 w-100 custom-rounded-top-lg d-md-none">
+                    <p class="font-l font-title font-weight-bold text-white mb-10">Find 1,245 results</p>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-white text-uppercase w-50 mr-2 font-weight-bold py-6" href="./hotel-list.html">clear</a>
+                        <a class="btn btn-primary text-uppercase w-50 font-weight-bold py-6" href="./hotel-list.html">filter</a>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Filter ends -->
         <!-- Hotel list starts -->
         <div class="col-md-8">
-            <ul>
+            <ul class="mb-lg-16 mb-md-10 mb-6">
                 <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
                     <a class="card hover__bg--shadow" href="#">
                         <div class="row no-gutters">
@@ -243,25 +270,25 @@ current: index
                                 <div class="swiper-container js-swiper-hotel-list">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark ">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark ">
                                             keyboard_arrow_left
                                             </span>
@@ -321,25 +348,25 @@ current: index
                                 <div class="swiper-container js-swiper-hotel-list">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -399,25 +426,25 @@ current: index
                                 <div class="swiper-container js-swiper-hotel-list">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -477,25 +504,25 @@ current: index
                                 <div class="swiper-container js-swiper-hotel-list">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -547,7 +574,7 @@ current: index
                     </a>
                 </li>
 
-                <li class="pb-lg-10 pb-md-6 pb-0 mb-lg-10 mb-md-6 mb-1 border-md-bottom border-0 js-hotel-list-card">
+                <li class="js-hotel-list-card">
                     <a class="card hover__bg--shadow" href="#">
                         <div class="row no-gutters">
                           <div class="col-4">
@@ -555,25 +582,25 @@ current: index
                                 <div class="swiper-container js-swiper-hotel-list">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada1.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada2.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada3.jpg');"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="hotel-list-img card-img rounded-lg-md-left rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
+                                            <div class="hotel-list-img card-img rounded-md-left-lg rounded-0 h-100" style="background-image: url('./assets/images/Rachada4.jpg');"></div>
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-next">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_right
                                             </span>
                                     </div>
-                                    <div class="hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
+                                    <div class="hotel-list-card-arrow js-hotel-list-card-arrow swiper-container__arrow--sm swiper-button-prev">
                                         <span class="material-icons text-dark">
                                             keyboard_arrow_left
                                             </span>
@@ -627,6 +654,34 @@ current: index
 
 
             </ul>
+            <!-- Pagination starts -->
+            <nav class="custom-pagination">
+                <ul class="custom-pagination__wrap bg-secondary custom-rounded-lg">
+                    <li class="custom-pagination__btn btn btn-outline-primary">
+                        <a class="custom-pagination__arrow" href="#">
+                            <span class="d-lg-block d-none">PREVIOUS</span>
+                            <span class="d-lg-none material-icons">keyboard_arrow_left</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="custom-pagination__link active" href="#">1</a>
+                        <a class="custom-pagination__link" href="#">2</a>
+                        <a class="custom-pagination__link d-md-inline d-none" href="#">3</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">4</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">5</a>
+                        <a class="custom-pagination__link d-lg-inline d-none" href="#">6</a>
+                        <a class="custom-pagination__link" href="#">...</a>
+                        <a class="custom-pagination__link" href="#">9</a>
+                    </li>
+                    <li class="custom-pagination__btn btn btn-primary">
+                        <a class="custom-pagination__arrow" href="#">
+                            <span class="d-lg-block d-none">NEXT</span>
+                            <span class="d-lg-none material-icons">keyboard_arrow_right</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Pagination ends -->
         </div>
         <!-- Hotel list ends -->
     </div>

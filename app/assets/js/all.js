@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
-  // .swiper-banner 
+
+  /////////////// index.html starts ///////////////
+
+  // .js-swiper-banner 
   // Initialize Swiper
-  var swiperBanner = new Swiper('.swiper-banner', {
+  
+  var swiperBanner = new Swiper('.js-swiper-banner', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -31,7 +35,7 @@ $(document).ready(function() {
 
   // Check-in / out 
 
-  $('#js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-search-bar-init-date').on('apply.daterangepicker', function(ev, picker) {
 
     // Show Check-in / out title
     $(this).siblings('.search-bar__content__title').show();
@@ -78,10 +82,10 @@ $(document).ready(function() {
   })
 
 
-  // .swiper-top-choices 
+  // .js-swiper-top-choices 
   // Initialize Swiper
 
-  var swiperTopChoices = new Swiper('.swiper-top-choices', {
+  var swiperTopChoices = new Swiper('.js-swiper-top-choices', {
     observer: true,
     observeParents: true,
     slidesPerView: 1.5,
@@ -139,10 +143,10 @@ $(document).ready(function() {
     }
   })
 
-  // .swiper-get-inspiration 
+  // .js-swiper-get-inspiration 
   // Initialize Swiper
 
-  var swiperGetInspiration = new Swiper('.swiper-get-inspiration', {
+  var swiperGetInspiration = new Swiper('.js-swiper-get-inspiration', {
     slidesPerView: 1.5,
     spaceBetween: 30,
     loop: true,
@@ -157,7 +161,10 @@ $(document).ready(function() {
     }
   });
 
-  /////////////// hotel-list starts ///////////////
+  
+  /////////////// index.html ends ///////////////
+
+  /////////////// hotel-list.html starts ///////////////
 
   var swiperHotelList = new Swiper('.js-swiper-hotel-list', {
     slidesPerView: 1,
@@ -174,51 +181,206 @@ $(document).ready(function() {
 
   $('.js-hotel-list-card').hover(
     function() {
-      $(this).find('.hotel-list-card-arrow').css('display','flex');
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','100');
     }, function() {
-      $(this).find('.hotel-list-card-arrow').css('display','none');
+      $(this).find('.js-hotel-list-card-arrow').css('opacity','0');
     }
   )
+
+
 
   // noUiSlider
 
   var slider = document.getElementById('slider');
 
-  // console.log(slider)
+  // If no noUiSlider is used in the page, stop running the code below
+  // if (!slider) {
+  //   return ;
+  // }
 
-  noUiSlider.create(slider, {
+  if(slider) {
+    noUiSlider.create(slider, {
       start: [800, 4000],
       connect: true,
       range: {
           'min': 800,
           'max': 4000
       },
+    })
+
+    function showBudget() {
+      const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+      const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+      $('.js-budget-min').text(budgetMin);
+      $('.js-budget-max').text(budgetMax);  
+    }
+  
+    showBudget();
+  
+  
+    slider.noUiSlider.on('slide', function(){
+        showBudget();
+    })
+  } 
+
+  // noUiSlider.create(slider, {
+  //     start: [800, 4000],
+  //     connect: true,
+  //     range: {
+  //         'min': 800,
+  //         'max': 4000
+  //     },
       
-  });
+  // });
 
-  function showBudget() {
-    const budgetMin = parseInt(slider.noUiSlider.get()[0]);
-    const budgetMax = parseInt(slider.noUiSlider.get()[1]);
-    $('.js-budget-min').text(budgetMin);
-    $('.js-budget-max').text(budgetMax);  
-  }
+  // function showBudget() {
+  //   const budgetMin = parseInt(slider.noUiSlider.get()[0]);
+  //   const budgetMax = parseInt(slider.noUiSlider.get()[1]);
+  //   $('.js-budget-min').text(budgetMin);
+  //   $('.js-budget-max').text(budgetMax);  
+  // }
 
-  showBudget();
+  // showBudget();
 
 
-  slider.noUiSlider.on('slide', function(){
-      showBudget();
-  })
+  // slider.noUiSlider.on('slide', function(){
+  //     showBudget();
+  // })
+
+  
 
   // Open filter in mobile version
 
-  // $('.js-filter-btn').on( 'click', function() {
-  //   $('.js-filter').slideToggle();
-  // })
-
-  $('.js-filter-btn').click(function(){
-    $('.js-filter').slideToggle();
+  $('.js-filter-btn').on( 'click', function(){
+    $('.js-filter').slideDown();
+    $('.js-filter__result').slideDown();
   })
-});
 
-/////////////// hotel-list ends ///////////////
+  $('.js-filter__btn--close').on( 'click', function(){
+    $('.js-filter').slideUp();
+    $('.js-filter__result').slideUp();
+  })
+
+  // Open sort in mobile version
+
+  $('.js-sort-btn').on( 'click', function(){
+    $('.js-sort').slideToggle();
+    $('.js-sort-btn').toggleClass('sort-btn-active');
+  })
+
+  
+
+  /////////////// hotel-list.html ends ///////////////
+  
+  
+  
+  
+  /////////////// hotel-info.html starts ///////////////
+
+  // .js-swiper-banner 
+  // Initialize Swiper
+  var swiperHotelInfo = new Swiper('.js-swiper-hotel-info', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Toggle fullscreen swiper when clicking button 
+
+  $('.js-hotel-info-img-link').on( 'click', function(){
+    $('.js-swiper-hotel-info').fadeIn();
+  });
+
+  $('.js-swiper-hotel-info__btn--close').on( 'click', function(){
+    $('.js-swiper-hotel-info').fadeOut();
+  });
+
+
+  // Remove all jQuery inline style when resizing to mobile 
+
+  let windowWidth = $(window).width()
+  $(window).resize(function() {
+    windowWidth = $(window).width();
+
+    if (windowWidth <= 767) {
+      $('.js-swiper-hotel-info').removeAttr('style');
+      $('.js-swiper-hotel-info').removeClass('swiper-hotel-info__bg');
+    
+    } else {
+      $('.js-swiper-hotel-info').addClass('swiper-hotel-info__bg');
+    }
+  })
+
+  // Add / remove rooms 
+
+  // Count total rooms
+  let totalRoomCount = 0;
+
+  // Add rooms  
+  $('.js-room-type-count-remove').on( 'click', function(e){
+    e.preventDefault();
+    // console.log($(this).parents('.js-room-type'));
+
+    let roomCount = parseInt($(this).siblings('.js-room-type-count-result').text());
+
+    // Open custom modal
+    $('.js-hotel-info-modal').slideDown();
+
+    if (roomCount === 0) {
+      return;
+    } 
+
+    roomCount -= 1;
+
+    // Show count result 
+    $(this).siblings('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type').siblings('.js-room-type-bar').find('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type-bar').siblings('.js-room-type').find('.js-room-type-count-result').text(roomCount);
+
+    // Update total room count
+    totalRoomCount -= 1;
+    updateHotelInfoModal();
+
+  });
+
+  // Remove rooms
+  $('.js-room-type-count-add').on( 'click', function(e){
+    e.preventDefault();
+
+    let roomCount = parseInt($(this).siblings('.js-room-type-count-result').text());
+
+    roomCount += 1;
+
+    // Show count result
+    $(this).siblings('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type').siblings('.js-room-type-bar').find('.js-room-type-count-result').text(roomCount);
+    $(this).parents('.js-room-type-bar').siblings('.js-room-type').find('.js-room-type-count-result').text(roomCount);
+
+    // Open custom modal
+    $('.js-hotel-info-modal').slideDown();
+
+    // Update total room count
+    totalRoomCount += 1;
+    updateHotelInfoModal();
+  });
+
+  // Update count 
+  function updateHotelInfoModal(){
+    $('.js-hotel-info-modal-count').text(totalRoomCount);
+  };
+  
+
+  // Close custom modal
+  $('.js-hotel-info-modal__btn--close').on( 'click', function(e){
+    e.preventDefault();
+    $('.js-hotel-info-modal').slideUp();
+  })
+
+  /////////////// hotel-info.html ends ///////////////
+
+});
