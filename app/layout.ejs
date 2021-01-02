@@ -27,6 +27,10 @@
       <%- include('templates/navbar.ejs'); %>
     <% } %>
 
+    <% if (title === 'ALOHA | Login') { %>
+      <%- include('templates/navbar-login.ejs'); %>
+    <% } %>
+
     <% if (searchBar) { %>
       <%- include('templates/search-bar.ejs'); %>
     <% } %>
