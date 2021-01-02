@@ -17,6 +17,11 @@
     border-top-left-radius: $custom-border-radius-lg !important;
 }
 
+.custom-rounded-bottom-lg {
+    border-bottom-right-radius: $custom-border-radius-lg !important;
+    border-bottom-left-radius: $custom-border-radius-lg !important;
+}
+
 .rounded-md-left-lg {
     @include media-breakpoint-up(md) {
         border-top-left-radius: $custom-border-radius-lg !important;
