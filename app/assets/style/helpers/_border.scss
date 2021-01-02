@@ -6,6 +6,12 @@
     border-radius: $custom-border-radius-lg !important;
 }
 
+.custom-rounded-md-lg {
+    @include media-breakpoint-up(md) {
+        border-radius: $custom-border-radius-lg !important;
+    }
+}
+
 .custom-rounded-top-lg {
     border-top-right-radius: $custom-border-radius-lg !important;
     border-top-left-radius: $custom-border-radius-lg !important;
