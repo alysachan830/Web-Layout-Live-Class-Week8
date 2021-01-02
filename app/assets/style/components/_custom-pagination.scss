@@ -1,0 +1,28 @@
+.custom-pagination {
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+    }
+
+    &__btn {
+
+        padding: 8px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 8px 16px;
+        }
+    }
+
+    &__link {
+        padding: 8px 14px;
+        border-radius: $custom-border-radius;
+        font-weight: $font-weight-bold;
+    }
+
+    &__link.active {
+        background: $white;
+    }
+}

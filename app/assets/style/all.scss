@@ -22,6 +22,7 @@
 @import "components/card";
 @import "components/search-bar";
 @import "components/noUiSlider";
+@import "components/custom-pagination";
 
 
 /* Layout */
@@ -30,3 +31,4 @@
 /* Page */
 @import "page/index";
 @import "page/hotel-list";
+@import "page/hotel-info";
