@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  // Global variables
+  let windowWidth = $(window).width()
 
   /////////////// index.html starts ///////////////
 
@@ -303,7 +305,6 @@ $(document).ready(function() {
 
   // Remove all jQuery inline style when resizing to mobile 
 
-  let windowWidth = $(window).width()
   $(window).resize(function() {
     windowWidth = $(window).width();
 
@@ -382,5 +383,29 @@ $(document).ready(function() {
   })
 
   /////////////// hotel-info.html ends ///////////////
+
+  /////////////// reservation-form.html starts ///////////////
+
+
+  // Toggle booking details in mobile version
+  $('.js-booking-details-btn').on( 'click',function(){
+    $('.js-booking-details').slideToggle();
+
+    // Rotate arrow 
+    $('.js-booking-details-btn-close').toggleClass('active');
+  })
+
+  // Clear all jquery in tablet and desktop version
+
+  $(window).resize(function() {
+    windowWidth = $(window).width();
+
+    if (windowWidth >= 768) {
+      $('.js-booking-details').removeAttr('style');
+      $('.js-booking-details-btn-close').removeClass('active');
+    } 
+  });
+
+  /////////////// reservation-form.html ends ///////////////
 
 });

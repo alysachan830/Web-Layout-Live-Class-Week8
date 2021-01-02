@@ -16,6 +16,7 @@
 @import "helpers/hover";
 @import "helpers/dropdown";
 @import "helpers/custom-form";
+@import "helpers/position";
 
 /* components */
 @import "components/swiper";
@@ -32,3 +33,4 @@
 @import "page/index";
 @import "page/hotel-list";
 @import "page/hotel-info";
+@import "page/reservation-form";
