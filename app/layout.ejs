@@ -31,6 +31,10 @@
       <%- include('templates/navbar-login.ejs'); %>
     <% } %>
 
+    <% if (title === 'ALOHA | Member') { %>
+      <%- include('templates/navbar-member.ejs'); %>
+    <% } %>
+
     <% if (searchBar) { %>
       <%- include('templates/search-bar.ejs'); %>
     <% } %>
