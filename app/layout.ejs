@@ -27,6 +27,14 @@
       <%- include('templates/navbar.ejs'); %>
     <% } %>
 
+    <% if (title === 'ALOHA | Login') { %>
+      <%- include('templates/navbar-login.ejs'); %>
+    <% } %>
+
+    <% if (title === 'ALOHA | Member') { %>
+      <%- include('templates/navbar-member.ejs'); %>
+    <% } %>
+
     <% if (searchBar) { %>
       <%- include('templates/search-bar.ejs'); %>
     <% } %>
@@ -41,9 +49,12 @@
       <%- include('templates/subscribe.ejs'); %>
     <% } %>
 
-
     <% if (footerFull) { %>
       <%- include('templates/footer-full.ejs'); %>
+    <% } %>
+
+    <% if (footer) { %>
+      <%- include('templates/footer.ejs'); %>
     <% } %>
 
     

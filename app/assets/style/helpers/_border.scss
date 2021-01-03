@@ -17,7 +17,12 @@
     border-top-left-radius: $custom-border-radius-lg !important;
 }
 
-.rounded-lg-md-left {
+.custom-rounded-bottom-lg {
+    border-bottom-right-radius: $custom-border-radius-lg !important;
+    border-bottom-left-radius: $custom-border-radius-lg !important;
+}
+
+.custom-rounded-md-left-lg {
     @include media-breakpoint-up(md) {
         border-top-left-radius: $custom-border-radius-lg !important;
         border-bottom-left-radius: $custom-border-radius-lg !important;    
@@ -27,5 +32,11 @@
 .border-md-bottom {
     @include media-breakpoint-up(md) {
         border-bottom: $border-width solid $border-color !important;
+    }
+}
+
+.border-md-0 {
+    @include media-breakpoint-up(md) {
+        border: 0 !important;
     }
 }
