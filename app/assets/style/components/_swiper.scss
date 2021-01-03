@@ -12,37 +12,7 @@
 
 /* Custom Swiper CSS */
 
-/* .swiper-banner */
-
-.swiper-banner {
-
-    &__button-prev {
-        margin-left: 15px;
-
-        @include media-breakpoint-up(md){
-        margin-left: 40px;
-        }
-
-        @include media-breakpoint-up(lg){
-        margin-left: 180px;
-        }
-    }
-
-    &__button-next {
-        margin-right: 15px;
-
-        @include media-breakpoint-up(md){
-        margin-right: 40px;
-        }
-
-        @include media-breakpoint-up(lg){
-        margin-right: 180px;
-        }
-    }
-
-}
-
-/* .swiper-top-choices */
+/* Custom swiper arrow */
 
 .swiper-container__arrow {
     background: $secondary;
