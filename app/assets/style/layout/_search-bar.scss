@@ -1,5 +1,7 @@
 .search-bar {
 
+    top: 82px;
+
     &__content {
         height: 56px;
         padding: 0 8px;
@@ -21,7 +23,6 @@
             font-size: get-font-size(s);
             display: block;
             color: $info;
-            // white-space: nowrap;
         }
     }
 }

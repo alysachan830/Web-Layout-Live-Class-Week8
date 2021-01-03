@@ -21,7 +21,6 @@
 /* components */
 @import "components/swiper";
 @import "components/card";
-@import "components/search-bar";
 @import "components/noUiSlider";
 @import "components/custom-pagination";
 
@@ -29,6 +28,7 @@
 /* Layout */
 @import "layout/navbar";
 @import "layout/navbar-member";
+@import "layout/search-bar";
 
 /* Page */
 @import "page/index";
