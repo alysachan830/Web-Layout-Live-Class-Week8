@@ -1,0 +1,48 @@
+.member {
+    padding-bottom: 48px;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: 54px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 134px;
+    }
+}
+
+.member__booking__card__img {
+    height: 226px;
+    border-radius: 8px 8px 0 0;
+
+    @include media-breakpoint-up(md) {
+        height: 100%;
+        border-radius: 8px 0 0 8px;
+    }
+}
+
+.member__booking__card__body {
+    background: $secondary;
+    border-radius: 0 0 8px 8px;
+
+    @include media-breakpoint-up(md) {
+        background: none;
+        border: 0;
+    }
+}
+
+.member__profile__img {
+    height: 64px;
+    width: 64px;
+    top: 0;
+    right: 0;
+}
+
+.profile__payment-methods {
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: auto;
+    }
+}
