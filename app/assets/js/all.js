@@ -49,21 +49,30 @@ $(document).ready(function() {
 
   // Guest count
 
-  $('.js-search-bar-guests').on( 'click', function(e){
+  // Add guest 
+  $('.js-guest-count-add').on( 'click', function(){
+    let guestCount = parseInt($(this).siblings('.js-search-bar-guests-count').text());
+    guestCount += 1;
 
-    let count = parseInt($(this).find('.js-search-bar-guests-count').text());
-
-    if (e.target.innerHTML === 'remove' && count > 0) {
-      count -= 1;
-    }
-    else if (e.target.innerHTML === 'add') {
-      count += 1;
-    }
     // Show count on dropdown
-    $(this).find('.js-search-bar-guests-count').text(count)
+    $(this).siblings('.js-search-bar-guests-count').text(guestCount);
 
     return false;
-  });
+  })
+
+  // Remove guest 
+  $('.js-guest-count-remove').on( 'click', function(){
+    let guestCount = parseInt($(this).siblings('.js-search-bar-guests-count').text());
+    
+    if(guestCount > 0) {
+        guestCount -= 1;
+    }
+
+    // Show count on dropdown
+    $(this).siblings('.js-search-bar-guests-count').text(guestCount);
+
+    return false;
+  })
 
   // Show guests count 
 
