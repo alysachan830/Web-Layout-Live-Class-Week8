@@ -1,4 +1,4 @@
-.navbar__logo{
+.navbar__logo {
     background: url('../images/logo-aloha.svg') no-repeat;
     width: 96px;
     height: 24px;
@@ -7,6 +7,14 @@
     overflow: hidden;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     outline: 0;
+}
+
+.navbar__dropdown-menu {
+    border: none;
+
+    @include media-breakpoint-up(md) {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
 }
