@@ -28,6 +28,7 @@
 
 /* Layout */
 @import "layout/navbar";
+@import "layout/navbar-member";
 
 /* Page */
 @import "page/index";
@@ -36,3 +37,4 @@
 @import "page/reservation-form";
 @import "page/reservation-receipt";
 @import "page/login";
+@import "page/member";
