@@ -1,0 +1,99 @@
+---
+title: ALOHA | Reservation Receipt
+layout: ./app/layout.ejs
+navbar: true
+searchBar: false
+subscribe: false
+footerFull: false
+footer: true
+engine: ejs
+current: index
+---
+
+<div class="reservation-receipt container pt-10">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h2 class="font-weight-bold font-xl border-bottom pb-10 mb-10">Reservation received!</h2>
+            <!-- Content starts -->
+            <div class="border-bottom pb-10 mb-10">
+                <div class="row mb-6">
+                    <div class="col-3">
+                        <p class="font-weight-bold">
+                            Guest
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <p class="text-info">
+                            David Lin
+                        </p>
+                    </div>
+                </div>
+                <div class="row mb-6">
+                    <div class="col-3">
+                        <p class="font-weight-bold">
+                            Email
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <div class="d-md-flex align-items-center">
+                            <p class="text-info mr-6">
+                                david0520@mail.com.tw
+                            </p>
+                            <p class="text-primary font-xs">
+                                Confirmation email sent to this address
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <p class="font-weight-bold">
+                            phone
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <p class="text-info">
+                            +886 9 32 456 789
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom pb-10 mb-10">
+                <div class="row">
+                    <div class="col-3">
+                        <p class="font-weight-bold">Room</p>
+                    </div>
+                    <div class="col-9">
+                        <p class="text-info">Deluxe Suite with Pool / 2 nights</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom pb-10 mb-10">
+                <div class="row mb-6">
+                    <div class="col-3">
+                        <p class="font-weight-bold">Check-in</p>
+                    </div>
+                    <div class="col-9">
+                        <p class="text-info">Wednesday, 17 June 2020</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <p class="font-weight-bold">Check-out</p>
+                    </div>
+                    <div class="col-9">
+                        <p class="text-info">Friday, 19 June 2020</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Content ends -->
+            <!-- Button starts -->
+            <div class="d-md-flex justify-content-end">
+                <a class="btn btn-outline-primary text-uppercase font-weight-bold mr-2 px-13 py-6 mb-md-0 mb-2 d-block" href="./login.html">edit reservation</a>
+                <a class="btn btn-primary text-uppercase font-weight-bold px-13 py-6 d-block" href="./index.html">Homepage</a>
+            </div>
+            <!-- Button ends -->
+        </div>
+        
+    </div>
+</div>
