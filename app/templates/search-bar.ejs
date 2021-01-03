@@ -1,4 +1,5 @@
-<div class="js-search-bar bg-secondary py-lg-10 py-md-6">
+<!-- Search bar starts -->
+<div class="js-search-bar search-bar bg-secondary py-lg-10 py-md-6 sticky-top">
   <form class="container d-flex align-items-center" action="#">
     <!-- Input starts -->
 
@@ -93,11 +94,11 @@
         <div class="dropdown-item d-md-flex py-4 hover__bg--secondary justify-content-between text-center js-search-bar-guests " href="#">
             <div >Adult</div>
             <div>
-              <a href="#">
+              <a class="js-guest-count-remove" href="#">
                 <span class="material-icons mr-6">remove</span>
               </a>
-              <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-adult-count">0</span>
-              <a href="#">
+              <span class="js-search-bar-guests-count js-search-bar-guests-adult-count mr-6 text-info">0</span>
+              <a class="js-guest-count-add" href="#">
                 <span class="material-icons">add</span>
               </a>
             </div>
@@ -105,11 +106,11 @@
         <div class="dropdown-item d-md-flex py-4 hover__bg--secondary justify-content-between text-center js-search-bar-guests " href="#">
           <div>Child</div>
           <div>
-            <a href="#">
+            <a class="js-guest-count-remove" href="#">
               <span class="material-icons mr-6">remove</span>
             </a>
-            <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-child-count">0</span>
-            <a href="#">
+            <span class="js-search-bar-guests-count js-search-bar-guests-child-count mr-6 text-info">0</span>
+            <a class="js-guest-count-add" href="#">
               <span class="material-icons">add</span>
             </a>
           </div>
@@ -117,11 +118,11 @@
         <div class="dropdown-item d-md-flex py-4 hover__bg--secondary justify-content-between text-center js-search-bar-guests " href="#">
           <div>Room</div>
           <div>
-            <a href="#">
+            <a class="js-guest-count-remove" href="#">
               <span class="material-icons mr-6">remove</span>
             </a>
-            <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-room-count">0</span>
-            <a href="#">
+            <span class="js-search-bar-guests-count js-search-bar-guests-room-count mr-6 text-info">0</span>
+            <a class="js-guest-count-add" href="#">
               <span class="material-icons">add</span>
             </a>
           </div>
@@ -130,9 +131,8 @@
     </div>
     <!-- Guest ends -->
   <!-- Input ends -->
-  <!-- </div> -->
   <a class="btn btn-primary py-6 px-13 font-weight-bold d-none d-md-block text-uppercase" href="./hotel-list.html"> search </a>
-  <!-- <input type="submit" class="btn btn-primary py-6 px-13 font-weight-bold w-auto d-none d-md-block w-100" value="SEARCH"> -->
 
   </form>
 </div>
+<!-- Search bar ends -->

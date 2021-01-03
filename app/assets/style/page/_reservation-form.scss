@@ -1,0 +1,25 @@
+.reservation-form {
+    padding-bottom: 48px;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: 417px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 193px;
+    }
+}
+
+.booking-details {
+    top: 0;
+    left: 0;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+.booking-details-btn-close.active {
+    transform: rotate(180deg);
+}
