@@ -24,7 +24,8 @@
   <body>
 
     
-      <nav class="navbar navbar-expand-md navbar-light sticky-top bg-white shadow-sm">
+      <!-- Navbar starts -->
+<nav class="navbar navbar-expand-md navbar-light sticky-top bg-white shadow-sm p-10">
     <div class="container flex-s-row-reverse flex-md-row">
         <a class="d-s-block d-md-none" href="./login.html">Login</a>
         <a class="navbar-brand" href="./index.html">
@@ -39,27 +40,33 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <!-- Navbar dropdown starts -->
-            <li class="nav-item dropdown mr-16">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown mr-md-16">
+              <a class="nav-link dropdown-toggle p-md-0 pt-4 pb-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="material-icons">language</span>
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="navbar__dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">English</a>
                 <a class="dropdown-item" href="#">中文</a>
                 <a class="dropdown-item" href="#">日文</a>
               </div>
             </li>
             <!-- Navbar dropdown ends -->
-            <li class="nav-item mr-16">
-                <a class="nav-link" href="#">Sign up</a>
+            <li class="nav-item mr-md-16">
+                <a class="nav-link p-md-0 pt-4 pb-0" href="#">Sign up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-s-none d-md-block" href="./login.html">Login</a>
+                <a class="nav-link d-s-none d-md-block p-0" href="./login.html">Login</a>
             </li>
           </ul>
         </div>
     </div>
-  </nav>
+</nav>
+<!-- Navbar ends -->
+
+    
+
+    
+
     
 
     
@@ -73,7 +80,7 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide swiper-slide-1 d-flex align-items-center img-filter--dark">
+            <div class="swiper-slide bg-img d-flex align-items-center img-filter--dark" style="background-image: url('./assets/images/index-banner.jpg');">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-8 col-6">
@@ -82,7 +89,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide swiper-slide-2 d-flex align-items-center img-filter--dark">
+            <div class="swiper-slide bg-img d-flex align-items-center img-filter--dark" style="background-image: url('./assets/images/RangRak.jpg');">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-8 col-6">
@@ -91,7 +98,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide swiper-slide-3 d-flex align-items-center img-filter--dark">
+            <div class="swiper-slide bg-img d-flex align-items-center img-filter--dark" style="background-image: url('./assets/images/top4.jpg');">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-8 col-6">
@@ -203,11 +210,11 @@
                 <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
                     <div>Adult</div>
                     <div>
-                      <a href="#">
+                      <a class="js-guest-count-remove" href="#">
                         <span class="material-icons mr-6">remove</span>
                       </a>
-                      <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-adult-count">0</span>
-                      <a href="#">
+                      <span class="js-search-bar-guests-count js-search-bar-guests-adult-count mr-6 text-info">0</span>
+                      <a class="js-guest-count-add" href="#">
                         <span class="material-icons">add</span>
                       </a>
                     </div>
@@ -215,11 +222,11 @@
                 <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
                   <div>Child</div>
                   <div>
-                    <a href="#">
+                    <a class="js-guest-count-remove" href="#">
                       <span class="material-icons mr-6">remove</span>
                     </a>
-                    <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-child-count">0</span>
-                    <a href="#">
+                    <span class="js-search-bar-guests-count js-search-bar-guests-child-count mr-6 text-info">0</span>
+                    <a class="js-guest-count-add" href="#">
                       <span class="material-icons">add</span>
                     </a>
                   </div>
@@ -227,11 +234,11 @@
                 <div class="dropdown-item d-flex py-4 hover__bg--secondary justify-content-between js-search-bar-guests " href="#">
                   <div>Room</div>
                   <div>
-                    <a href="#">
+                    <a class="js-guest-count-remove" href="#">
                       <span class="material-icons mr-6">remove</span>
                     </a>
-                    <span class="mr-6 text-info js-search-bar-guests-count js-search-bar-guests-room-count">0</span>
-                    <a href="#">
+                    <span class="js-search-bar-guests-count js-search-bar-guests-room-count mr-6 text-info">0</span>
+                    <a class="js-guest-count-add" href="#">
                       <span class="material-icons">add</span>
                     </a>
                   </div>
@@ -840,14 +847,13 @@
 
     
 
-
     
       <!-- Footer starts -->
 <div class="container py-10">
     <div class="row justify-content-between">
         <div class="col-lg-7 d-flex flex-md-row flex-s-column-reverse align-items-center align-items-md-start justify-content-md-between justify-content-lg-start">
             <span class="font-s mr-lg-17 text-info">© 2020 ALOHA, Inc. All rights reserved.</span>
-            <ul class="d-flex">
+            <ul class="d-flex mb-md-0 mb-6">
                 <li>
                     <a class="font-s text-info mr-10" href="#">FAQs</a>
                 </li>
@@ -894,6 +900,8 @@
     </div>
 </div>
 <!-- Footer ends -->
+    
+
     
 
     

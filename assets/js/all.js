@@ -1,9 +1,11 @@
 "use strict";
 
 $(document).ready(function () {
-  /////////////// index.html starts ///////////////
+  // Global variables
+  var windowWidth = $(window).width(); /////////////// index.html starts ///////////////
   // .js-swiper-banner 
   // Initialize Swiper
+
   var swiperBanner = new Swiper('.js-swiper-banner', {
     loop: true,
     navigation: {
@@ -29,18 +31,25 @@ $(document).ready(function () {
 
     $(this).css('font-size', '14px');
   }); // Guest count
+  // Add guest 
 
-  $('.js-search-bar-guests').on('click', function (e) {
-    var count = parseInt($(this).find('.js-search-bar-guests-count').text());
+  $('.js-guest-count-add').on('click', function () {
+    var guestCount = parseInt($(this).siblings('.js-search-bar-guests-count').text());
+    guestCount += 1; // Show count on dropdown
 
-    if (e.target.innerHTML === 'remove' && count > 0) {
-      count -= 1;
-    } else if (e.target.innerHTML === 'add') {
-      count += 1;
+    $(this).siblings('.js-search-bar-guests-count').text(guestCount);
+    return false;
+  }); // Remove guest 
+
+  $('.js-guest-count-remove').on('click', function () {
+    var guestCount = parseInt($(this).siblings('.js-search-bar-guests-count').text());
+
+    if (guestCount > 0) {
+      guestCount -= 1;
     } // Show count on dropdown
 
 
-    $(this).find('.js-search-bar-guests-count').text(count);
+    $(this).siblings('.js-search-bar-guests-count').text(guestCount);
     return false;
   }); // Show guests count 
 
@@ -136,10 +145,7 @@ $(document).ready(function () {
     $(this).find('.js-hotel-list-card-arrow').css('opacity', '0');
   }); // noUiSlider
 
-  var slider = document.getElementById('slider'); // If no noUiSlider is used in the page, stop running the code below
-  // if (!slider) {
-  //   return ;
-  // }
+  var slider = document.getElementById('slider');
 
   if (slider) {
     var showBudget = function showBudget() {
@@ -161,25 +167,7 @@ $(document).ready(function () {
     slider.noUiSlider.on('slide', function () {
       showBudget();
     });
-  } // noUiSlider.create(slider, {
-  //     start: [800, 4000],
-  //     connect: true,
-  //     range: {
-  //         'min': 800,
-  //         'max': 4000
-  //     },
-  // });
-  // function showBudget() {
-  //   const budgetMin = parseInt(slider.noUiSlider.get()[0]);
-  //   const budgetMax = parseInt(slider.noUiSlider.get()[1]);
-  //   $('.js-budget-min').text(budgetMin);
-  //   $('.js-budget-max').text(budgetMax);  
-  // }
-  // showBudget();
-  // slider.noUiSlider.on('slide', function(){
-  //     showBudget();
-  // })
-  // Open filter in mobile version
+  } // Open filter in mobile version
 
 
   $('.js-filter-btn').on('click', function () {
@@ -217,7 +205,6 @@ $(document).ready(function () {
     $('.js-swiper-hotel-info').fadeOut();
   }); // Remove all jQuery inline style when resizing to mobile 
 
-  var windowWidth = $(window).width();
   $(window).resize(function () {
     windowWidth = $(window).width();
 
@@ -233,8 +220,7 @@ $(document).ready(function () {
   var totalRoomCount = 0; // Add rooms  
 
   $('.js-room-type-count-remove').on('click', function (e) {
-    e.preventDefault(); // console.log($(this).parents('.js-room-type'));
-
+    e.preventDefault();
     var roomCount = parseInt($(this).siblings('.js-room-type-count-result').text()); // Open custom modal
 
     $('.js-hotel-info-modal').slideDown();
@@ -278,5 +264,22 @@ $(document).ready(function () {
     e.preventDefault();
     $('.js-hotel-info-modal').slideUp();
   }); /////////////// hotel-info.html ends ///////////////
+  /////////////// reservation-form.html starts ///////////////
+  // Toggle booking details in mobile version
+
+  $('.js-booking-details-btn').on('click', function () {
+    $('.js-booking-details').slideToggle(); // Rotate arrow 
+
+    $('.js-booking-details-btn-close').toggleClass('active');
+  }); // Clear all jquery in tablet and desktop version
+
+  $(window).resize(function () {
+    windowWidth = $(window).width();
+
+    if (windowWidth >= 768) {
+      $('.js-booking-details').removeAttr('style');
+      $('.js-booking-details-btn-close').removeClass('active');
+    }
+  }); /////////////// reservation-form.html ends ///////////////
 });
 //# sourceMappingURL=all.js.map
